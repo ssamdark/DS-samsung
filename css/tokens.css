@@ -57,7 +57,7 @@
 :root {
   /* 상태색 — variables.css 의 primary/gray 톤과 어울리도록 채도 맞춤 */
   --status-positive: #009632;
-  --status-positive-bg: #D9FFE6;
+  --status-positive-bg: #E0F2E6;
   --status-info: var(--primary);       /* 신호등 컬러 4번째 — "조치중"(파랑) */
   --status-info-bg: var(--primary-50);
   --status-caution: #FF9200;

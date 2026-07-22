@@ -6,7 +6,7 @@
 <title>실무자 대시보드</title>
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/style.css?v=11">
 <link href="RemixIcon/remixicon.css" rel="stylesheet">
 </head>
 <body>
@@ -126,16 +126,13 @@
 
       <div class="stat-grid">
 
-        <div class="stat-card">
+        <div class="stat-card stat-card--indent-body">
           <div class="stat-card__head">
-            <div class="stat-card__title-group">
-              <div class="icon-box icon-box--blue"><i class="ri-team-line"></i></div>
-              <span class="stat-card__title">전체 협력사</span>
-            </div>
+            <span class="stat-card__title">전체 협력사</span>
+            <div class="icon-box icon-box--blue"><i class="ri-team-line"></i></div>
           </div>
           <div class="stat-value-row"><span class="stat-value">612</span><span class="stat-unit">개사</span></div>
           <p class="stat-note">1차사 대상 · 적격수급인 평가 운영</p>
-          <div class="divider"></div>
           <div class="stat-footer">
             <div class="stat-footer__col"><span class="stat-footer__value">158</span><span class="stat-footer__label">1차사</span></div>
             <div class="stat-footer__col stat-footer__col--split"><span class="stat-footer__value">344</span><span class="stat-footer__label">2차사</span></div>
@@ -143,34 +140,27 @@
           </div>
         </div>
 
-        <div class="stat-card">
+        <div class="stat-card stat-card--indent-body">
           <div class="stat-card__head">
-            <div class="stat-card__title-group">
-              <div class="icon-box icon-box--green"><i class="ri-shield-check-line"></i></div>
-              <span class="stat-card__title">적격수급인 평가</span>
-            </div>
-            <span class="badge badge--positive">76%</span>
+            <span class="stat-card__title">적격수급인 평가</span>
+            <div class="icon-box icon-box--blue"><i class="ri-shield-check-line"></i></div>
           </div>
           <div class="stat-value-row"><span class="stat-value">118</span><span class="stat-unit">/ 158</span></div>
           <p class="stat-note">1차사 대상 · 평가 완료 기준</p>
-          <div class="divider"></div>
           <div class="stat-footer">
-            <div class="stat-footer__col"><span class="amount--caution">23</span><span class="stat-footer__label">진행중</span></div>
+            <div class="stat-footer__col"><span class="stat-footer__value">23</span><span class="stat-footer__label">진행중</span></div>
             <div class="stat-footer__col stat-footer__col--split"><span class="stat-footer__value">17</span><span class="stat-footer__label">미실시</span></div>
-            <div class="stat-footer__col stat-footer__col--split"><span class="amount--negative">9</span><span class="stat-footer__label">만료임박</span></div>
+            <div class="stat-footer__col stat-footer__col--split"><span class="stat-footer__value">9</span><span class="stat-footer__label">만료임박</span></div>
           </div>
         </div>
 
-        <div class="stat-card">
+        <div class="stat-card stat-card--indent-body">
           <div class="stat-card__head">
-            <div class="stat-card__title-group">
-              <div class="icon-box icon-box--blue"><i class="ri-file-text-line"></i></div>
-              <span class="stat-card__title">관리대상 협력사</span>
-            </div>
+            <span class="stat-card__title">관리대상 협력사</span>
+            <div class="icon-box icon-box--blue"><i class="ri-file-text-line"></i></div>
           </div>
           <div class="stat-value-row"><span class="stat-value">454</span><span class="stat-unit">개사</span></div>
           <p class="stat-note">관리대상 등록 완료 · 확인 대기 <span class="amount--accent">11건</span></p>
-          <div class="divider"></div>
           <div class="stat-footer">
             <div class="stat-footer__col"><span class="stat-footer__value">344</span><span class="stat-footer__label">2차사</span></div>
             <div class="stat-footer__col stat-footer__col--split"><span class="stat-footer__value">110</span><span class="stat-footer__label">3차사</span></div>
@@ -178,22 +168,18 @@
           </div>
         </div>
 
-        <div class="stat-card">
+        <div class="stat-card stat-card--indent-body">
           <div class="stat-card__head">
-            <div class="stat-card__title-group">
-              <div class="icon-box icon-box--blue"><i class="ri-user-add-line"></i></div>
-              <span class="stat-card__title">신규 등록 협력사</span>
-            </div>
-            <span class="badge badge--primary">당월</span>
+            <span class="stat-card__title">신규 등록 협력사</span>
+            <div class="icon-box icon-box--blue"><i class="ri-user-add-line"></i></div>
           </div>
           <div class="stat-value-row"><span class="stat-value">4</span><span class="stat-unit">개사</span></div>
           <p class="stat-note">전월 대비 <span class="amount--positive">+1개사</span> · 차수 미분류 1건 확인 필요</p>
-          <div class="divider"></div>
           <div class="stat-footer">
             <div class="stat-footer__col"><span class="stat-footer__value">1</span><span class="stat-footer__label">1차사</span></div>
             <div class="stat-footer__col stat-footer__col--split"><span class="stat-footer__value">2</span><span class="stat-footer__label">2차사</span></div>
             <div class="stat-footer__col stat-footer__col--split"><span class="stat-footer__value">0</span><span class="stat-footer__label">3차사</span></div>
-            <div class="stat-footer__col stat-footer__col--split"><span class="amount--caution">1</span><span class="stat-footer__label">미분류</span></div>
+            <div class="stat-footer__col stat-footer__col--split"><span class="stat-footer__value">1</span><span class="stat-footer__label">미분류</span></div>
           </div>
         </div>
       </div>
@@ -203,8 +189,9 @@
         <div class="panel">
           <div class="panel__head">
             <div class="panel__title-group"><span class="panel__title">협력사 수집 현황</span><span class="panel__subtitle">연계 시스템 · 수집 경로별</span></div>
-            <a href="#" class="panel__link">전체 보기 →</a>
+            <a href="#" class="btn-outline btn-outline--sm">전체 보기</a>
           </div>
+          <div class="stat-value-row"><span class="stat-value">582</span><span class="stat-unit">건</span></div>
           <div class="source-list">
             <div class="source-card">
               <div class="inline-group"><span class="source-item__name">법무팀 계약시스템</span><span class="badge--blue-sm">연계</span></div>
@@ -223,61 +210,52 @@
               <span class="source-card__stat"><span class="source-card__pct">9%</span> <span class="source-card__value">55<span class="source-card__unit">건</span></span></span>
             </div>
           </div>
-          <div class="panel__footer">
-            <span class="footer-value-row">합계 <span class="footer-value">582</span>건</span>
-          </div>
         </div>
 
-        <div class="panel">
+        <div class="panel panel--roomy-v">
           <div class="panel__head">
             <div class="panel__title-group"><span class="panel__title">적격수급인 평가 진척</span><span class="panel__subtitle">1차사 · 체크리스트 평가</span></div>
-            <a href="#" class="panel__link">평가 요청하기 →</a>
+            <a href="#" class="btn-outline btn-outline--sm">평가 요청하기</a>
           </div>
           <div class="eval-grid">
 
             <div class="eval-col">
               <span class="eval-col__title">평가 완료율</span>
-              <div class="donut-wrap">
-                <div class="donut" style="background:conic-gradient(var(--status-positive) 0 75%,var(--status-caution) 75% 90%,var(--gray-300) 90% 100%)">
-                  <div class="donut__hole"><span class="donut__value">75%</span><span class="donut__label">완료율</span></div>
+              <div class="donut-legend-row donut-legend-row--compact">
+                <div class="donut-wrap">
+                  <div class="donut donut--sm" style="background:conic-gradient(var(--status-positive) 0 75%,var(--primary) 75% 90%,var(--status-caution) 90% 100%)">
+                    <div class="donut__hole"><span class="donut__label-main">75%</span><span class="donut__label">완료율</span></div>
+                  </div>
                 </div>
-              </div>
-              <div class="eval-legend">
-                <div class="eval-legend__row"><span class="legend-dot legend-dot--positive"></span><span class="eval-legend__label">평가 완료</span><span class="eval-legend__value">118</span><span class="eval-legend__pct">75%</span></div>
-                <div class="eval-legend__row"><span class="legend-dot legend-dot--caution"></span><span class="eval-legend__label">진행중</span><span class="eval-legend__value">23</span><span class="eval-legend__pct">15%</span></div>
-                <div class="eval-legend__row"><span class="legend-dot legend-dot--muted"></span><span class="eval-legend__label">미실시</span><span class="eval-legend__value">17</span><span class="eval-legend__pct">10%</span></div>
+                <div class="legend-list">
+                  <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--positive"></span><span class="legend-label">평가 완료</span></div><span class="legend-value">75%</span></div>
+                  <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--primary"></span><span class="legend-label">진행중</span></div><span class="legend-value">15%</span></div>
+                  <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--caution"></span><span class="legend-label">미실시</span></div><span class="legend-value">10%</span></div>
+                </div>
               </div>
             </div>
 
             <div class="eval-col eval-col--tight">
               <span class="eval-col__title">진행 단계별 현황</span>
               <div class="stage-card-grid">
-                <div class="stage-card"><span class="stage-card__value stage-card__value--positive">9</span><span class="stage-card__label">서류 요청 · 미제출</span></div>
-                <div class="stage-card"><span class="stage-card__value stage-card__value--primary">8</span><span class="stage-card__label">서류 제출 · 평가 대기</span></div>
-                <div class="stage-card"><span class="stage-card__value stage-card__value--caution">4</span><span class="stage-card__label">평가 진행중 (체크리스트)</span></div>
-                <div class="stage-card"><span class="stage-card__value stage-card__value--negative">2</span><span class="stage-card__label">보완 요청 · 재제출 대기</span></div>
+                <div class="stage-card"><div class="inline-group"><span class="legend-dot legend-dot--negative"></span><span class="stage-card__value">9</span></div><span class="stage-card__label">서류 요청 · 미제출</span></div>
+                <div class="stage-card"><div class="inline-group"><span class="legend-dot legend-dot--caution"></span><span class="stage-card__value">8</span></div><span class="stage-card__label">서류 제출 · 평가 대기</span></div>
+                <div class="stage-card"><div class="inline-group"><span class="legend-dot legend-dot--primary"></span><span class="stage-card__value">4</span></div><span class="stage-card__label">평가 진행중 (체크리스트)</span></div>
+                <div class="stage-card"><div class="inline-group"><span class="legend-dot legend-dot--caution"></span><span class="stage-card__value">2</span></div><span class="stage-card__label">보완 요청 · 재제출 대기</span></div>
               </div>
               <p class="stage__note">서류 제출 메일 발송(자동/수동) 이후 협력사 회신 → 체크리스트 평가 → 보완 단계로 추적합니다.</p>
             </div>
 
             <div class="col" style="gap:14px">
               <span class="eval-col__title">재평가 만료 임박</span>
-              <div class="alert-list">
-                <div class="alert-row alert-row--negative">
-                  <span class="alert-row__count alert-row__count--negative">2</span>
-                  <div class="alert-row__body"><span class="alert-row__title">7일 이내</span><span class="alert-row__sub">즉시 재평가 의뢰</span></div>
-                  <a href="#" class="alert-row__link alert-row__link--negative">재평가 요청 →</a>
-                </div>
-                <div class="alert-row alert-row--caution">
-                  <span class="alert-row__count alert-row__count--caution">7</span>
-                  <div class="alert-row__body"><span class="alert-row__title">8 ~ 30일</span><span class="alert-row__sub">재평가 준비</span></div>
-                  <a href="#" class="alert-row__link alert-row__link--caution">재평가 요청 →</a>
-                </div>
-                <div class="bottleneck">
-                  <span class="bottleneck__title">평가 시작 지연 · 병목</span>
-                  <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--negative"></span><span class="legend-label">협력사 이메일 미등록 (요청 불가)</span></div><span class="legend-value legend-value--negative">8</span></div>
-                  <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--caution"></span><span class="legend-label">보완 재요청 대기</span></div><span class="legend-value">2</span></div>
-                </div>
+              <div class="legend-list legend-list--card">
+                <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--caution"></span><span class="legend-label">7일 이내</span></div><span class="legend-value">2건</span></div>
+                <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--caution"></span><span class="legend-label">8 ~ 30일 이내</span></div><span class="legend-value">7건</span></div>
+              </div>
+              <span class="eval-col__title">평가 시작 지연 · 병목</span>
+              <div class="legend-list legend-list--card">
+                <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--negative"></span><span class="legend-label">협력사 이메일 미등록</span></div><span class="legend-value">8건</span></div>
+                <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--caution"></span><span class="legend-label">보완 재요청 대기</span></div><span class="legend-value">2건</span></div>
               </div>
             </div>
           </div>
@@ -295,7 +273,7 @@
             <div class="ehs-row"><span class="ehs-row__label">정기 위험성평가</span><span class="ehs-row__value">34<span class="ehs-row__unit">건</span></span></div>
             <div class="ehs-row"><span class="ehs-row__label">작업환경측정</span><span class="ehs-row__value">24<span class="ehs-row__unit">건</span></span></div>
           </div>
-          <div class="panel__footer">
+          <div class="panel__footer panel__footer--plain">
             <div class="activity-row__labels"><span class="activity-row__title">정기협의체</span><span class="stat-footer__label">당월 실시 여부</span></div>
             <span class="badge--positive-pill">이번 달 실시 완료</span>
           </div>
@@ -304,11 +282,10 @@
         <div class="panel panel--tight">
           <div class="panel__head">
             <div class="panel__title-group"><span class="panel__title">문제점 개선 관리</span><span class="panel__subtitle">7개 수집경로 통합</span></div>
-            <a href="#" class="panel__link">전체 보기 →</a>
+            <a href="#" class="btn-outline btn-outline--sm">전체 보기</a>
           </div>
           <div class="issue-count-row">
             <div class="issue-count-group"><span class="issue-count">146</span><span class="issue-count__label">전체 문제점</span></div>
-            <span class="badge badge--negative">지연 6</span>
           </div>
           <div class="segment-bar">
             <div class="segment-bar__seg segment-bar__seg--positive" style="width:53.4%">78</div>
@@ -316,11 +293,11 @@
             <div class="segment-bar__seg segment-bar__seg--caution" style="width:12.3%">18</div>
             <div class="segment-bar__seg segment-bar__seg--negative" style="width:4.2%">6</div>
           </div>
-          <div class="legend-list">
+          <div class="legend-list legend-list--narrow">
             <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--positive"></span><span class="legend-label">완료</span></div><span class="legend-value">78</span></div>
             <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--primary"></span><span class="legend-label">조치중</span></div><span class="legend-value">44</span></div>
             <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--caution"></span><span class="legend-label">미조치</span></div><span class="legend-value">18</span></div>
-            <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--negative"></span><span class="legend-label">지연 (기한 초과)</span></div><span class="legend-value legend-value--negative">6</span></div>
+            <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--negative"></span><span class="legend-label">지연 (기한 초과)</span></div><span class="legend-value">6</span></div>
           </div>
           <div class="panel__footnote">주요 발생경로 · 순회점검 <b class="legend-label">41%</b> · 기계기구설비 22% · 합동점검 16% · 아차사고 11% · 기타 10%</div>
         </div>
@@ -329,17 +306,14 @@
           <div class="panel__title-group"><span class="panel__title">안전 이벤트</span><span class="badge--gray-sm">당월</span></div>
           <div class="event-card-list">
             <div class="event-card">
-              <div class="event-card__icon event-card__icon--negative"><i class="ri-close-circle-line"></i></div>
               <span class="event-card__label">작업중지</span>
               <span class="event-card__value">2<span class="event-card__unit">건</span></span>
             </div>
             <div class="event-card">
-              <div class="event-card__icon event-card__icon--orange"><i class="ri-file-warning-line"></i></div>
               <span class="event-card__label">사고발생</span>
               <span class="event-card__value">1<span class="event-card__unit">건</span></span>
             </div>
             <div class="event-card">
-              <div class="event-card__icon event-card__icon--blue"><i class="ri-chat-3-line"></i></div>
               <span class="event-card__label">안전 소통채널</span>
               <span class="event-card__value">4<span class="event-card__unit">건</span></span>
             </div>
@@ -350,33 +324,29 @@
           <div class="detail-summary-row">
             <div class="panel__title-group"><span class="panel__title">조치 필요 항목 · 상세</span><span class="panel__subtitle">유형별 · 마감 임박순</span></div>
           </div>
-          <div class="detail-counts"><span class="badge--caution-solid">24건</span><span>만료임박 <b class="amount--negative">9건</b></span><span>미식별 <b class="amount--caution">11건</b></span><span>미조치 <b class="legend-label">4건</b></span></div>
+          <div class="detail-counts"><span class="badge--gray-sm">24건</span><span>만료임박 <b class="legend-label">9건</b></span><span>미식별 <b class="legend-label">11건</b></span><span>미조치 <b class="legend-label">4건</b></span></div>
           <div class="detail-grid">
             <div class="detail-item">
               <div class="detail-item__head-row">
-                <div class="detail-item__icon detail-item__icon--negative"><i class="ri-time-line"></i></div>
-                <div class="detail-item__value-row"><span class="detail-item__value detail-item__value--negative">9</span><span class="detail-item__unit">개사</span></div>
+                <div class="detail-item__value-row"><span class="legend-dot legend-dot--caution"></span><span class="detail-item__value">9</span><span class="detail-item__unit">개사</span></div>
               </div>
               <div class="col col--tight"><span class="detail-item__title">적격수급인 평가 만료 임박</span><span class="alert-row__sub">30일 내 재평가 필요 · 1차사</span></div>
             </div>
             <div class="detail-item">
               <div class="detail-item__head-row">
-                <div class="detail-item__icon detail-item__icon--caution"><i class="ri-user-line"></i></div>
-                <div class="detail-item__value-row"><span class="detail-item__value detail-item__value--caution">11</span><span class="detail-item__unit">건</span></div>
+                <div class="detail-item__value-row"><span class="legend-dot legend-dot--caution"></span><span class="detail-item__value">11</span><span class="detail-item__unit">건</span></div>
               </div>
               <div class="col col--tight"><span class="detail-item__title">운영부서 확인 대기</span><span class="alert-row__sub">미식별 수집 데이터 · 담당자 미지정</span></div>
             </div>
             <div class="detail-item">
               <div class="detail-item__head-row">
-                <div class="detail-item__icon detail-item__icon--negative"><i class="ri-tools-line"></i></div>
-                <div class="detail-item__value-row"><span class="detail-item__value detail-item__value--negative">4</span><span class="detail-item__unit">건</span></div>
+                <div class="detail-item__value-row"><span class="legend-dot legend-dot--negative"></span><span class="detail-item__value">4</span><span class="detail-item__unit">건</span></div>
               </div>
               <div class="col col--tight"><span class="detail-item__title">미조치 문제점 (기한 임박)</span><span class="alert-row__sub">개선 종료일 3일 이내</span></div>
             </div>
             <div class="detail-item">
               <div class="detail-item__head-row">
-                <div class="detail-item__icon detail-item__icon--caution"><i class="ri-search-line"></i></div>
-                <div class="detail-item__value-row"><span class="detail-item__value detail-item__value--caution">7</span><span class="detail-item__unit">건</span></div>
+                <div class="detail-item__value-row"><span class="legend-dot legend-dot--negative"></span><span class="detail-item__value">7</span><span class="detail-item__unit">건</span></div>
               </div>
               <div class="col col--tight"><span class="detail-item__title">미등록 순회점검</span><span class="alert-row__sub">이번 달 점검 결과 미입력</span></div>
             </div>
