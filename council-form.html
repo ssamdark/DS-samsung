@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>정기협의체 등록</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/style.css?v=10">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+<div class="dash">
+
+  <aside class="dash__sidebar">
+    <div class="brand">
+      <div class="brand__icon">
+        <i class="ri-shield-check-fill"></i>
+      </div>
+      <div class="brand__text">
+        <span class="brand__name">협력사 EHS</span>
+        <span class="brand__sub">통합관리 시스템</span>
+      </div>
+    </div>
+
+    <nav class="nav-list">
+      <div class="nav-item">
+        <i class="ri-focus-3-line nav-item__icon"></i>
+        <span class="nav-item__label">적격수급인 대상 선정</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-file-list-3-line nav-item__icon"></i>
+        <span class="nav-item__label">적격수급인 평가</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-building-2-line nav-item__icon"></i>
+        <span class="nav-item__label">관리대상 협력사</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-search-line nav-item__icon"></i>
+        <span class="nav-item__label">점검</span>
+      </div>
+      <a href="council-list.html" class="nav-item nav-item--active">
+        <i class="ri-calendar-2-line nav-item__icon"></i>
+        <span class="nav-item__label">정기협의체</span>
+      </a>
+      <div class="nav-item">
+        <i class="ri-alert-line nav-item__icon"></i>
+        <span class="nav-item__label">위험성 평가 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-feedback-line nav-item__icon"></i>
+        <span class="nav-item__label">의견 청취 및 위험 신고</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-tools-line nav-item__icon"></i>
+        <span class="nav-item__label">문제점 개선 통합 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-shield-line nav-item__icon"></i>
+        <span class="nav-item__label">안전보건 정보제공</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-building-4-line nav-item__icon"></i>
+        <span class="nav-item__label">기계기구 및 설비 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-speed-line nav-item__icon"></i>
+        <span class="nav-item__label">작업환경측정 결과 등록</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-first-aid-kit-line nav-item__icon"></i>
+        <span class="nav-item__label">인적 사고발생 보고서</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-flask-line nav-item__icon"></i>
+        <span class="nav-item__label">화학물질 MSDS 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-grid-line nav-item__icon"></i>
+        <span class="nav-item__label">공통 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-settings-3-line nav-item__icon"></i>
+        <span class="nav-item__label">시스템 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-briefcase-line nav-item__icon"></i>
+        <span class="nav-item__label">마이데스크</span>
+      </div>
+    </nav>
+
+    <div class="nav-shortcuts">
+      <a href="site-dashboard.html" class="nav-shortcuts__link">사업장 현황 DASHBOARD</a>
+      <a href="index.html" class="nav-shortcuts__link">실무자 DASHBOARD</a>    </div>
+  </aside>
+
+  <div class="dash__main">
+
+    <header class="topbar">
+      <div class="topbar__actions">
+        <button class="toolbar-btn">
+          한국어
+        </button>
+        <button class="toolbar-btn toolbar-btn--primary">
+          수원 사업장
+        </button>
+        <button class="icon-btn">
+          <i class="ri-notification-3-line"></i>
+          <span class="icon-btn__dot"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <div class="page-header">
+        <h1 class="page-title">정기협의체 등록</h1>
+        <div class="page-header__actions">
+          <a href="council-detail.html" class="btn-outline">취소</a>
+          <button class="btn-outline">저장</button>
+          <button class="btn-primary">프리셋 불러오기</button>
+        </div>
+      </div>
+
+      <div class="panel panel--sheet">
+
+        <div class="detail-section">
+          <div class="section-heading"><span class="section-heading__mark"></span>기본정보</div>
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th class="info-table__label" scope="row"><span class="form-field__required">*</span>회의명</th>
+                <td class="info-table__value" colspan="3">
+                  <input type="text" class="filter-input" placeholder="회의명">
+                </td>
+              </tr>
+              <tr>
+                <th class="info-table__label" scope="row"><span class="form-field__required">*</span>회의장소</th>
+                <td class="info-table__value">
+                  <input type="text" class="filter-input" placeholder="회의장소">
+                </td>
+                <th class="info-table__label" scope="row"><span class="form-field__required">*</span>회의일시</th>
+                <td class="info-table__value">
+                  <div class="filter-input-icon">
+                    <input type="text" class="filter-input" placeholder="회의날짜를 입력해주세요">
+                    <i class="ri-calendar-line filter-input-icon__icon"></i>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="info-table__label" scope="row">작성자</th>
+                <td class="info-table__value info-table__value--readonly">최지수</td>
+                <th class="info-table__label" scope="row">작성일자</th>
+                <td class="info-table__value info-table__value--readonly">2026-07-14</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="detail-section">
+          <div class="section-heading-row">
+            <div class="section-heading"><span class="section-heading__mark"></span>협력업체</div>
+            <button class="btn-outline btn-outline--sm">협력업체 프리셋 불러오기</button>
+          </div>
+          <table class="plain-table" id="partnerTable">
+            <thead>
+              <tr>
+                <th>업체명</th>
+                <th>대표자</th>
+                <th>사업자등록번호</th>
+                <th>주소</th>
+                <th style="width: 76px;"><button type="button" class="table-add-btn" data-add-row="partner" aria-label="협력업체 추가"><i class="ri-add-line"></i></button></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="5" class="plain-table__empty">협력업체를 추가해 주세요.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="detail-section">
+          <div class="section-heading"><span class="section-heading__mark"></span>회의 내용</div>
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th class="info-table__label" scope="row"><span class="form-field__required">*</span>회의 내용</th>
+                <td class="info-table__value"><textarea class="form-textarea"></textarea></td>
+              </tr>
+              <tr>
+                <th class="info-table__label" scope="row"><span class="form-field__required">*</span>법적협의사항</th>
+                <td class="info-table__value"><textarea class="form-textarea"></textarea></td>
+              </tr>
+              <tr>
+                <th class="info-table__label" scope="row">회의사진</th>
+                <td class="info-table__value">
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <button class="btn-outline btn-outline--sm">파일 업로드</button>
+                    <i class="ri-information-line" style="color: var(--text-tertiary); font-size: 16px;"></i>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th class="info-table__label" scope="row">첨부파일</th>
+                <td class="info-table__value">
+                  <div style="display:flex; align-items:center; gap:8px;">
+                    <button class="btn-outline btn-outline--sm">파일 업로드</button>
+                    <i class="ri-information-line" style="color: var(--text-tertiary); font-size: 16px;"></i>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="detail-section">
+          <div class="section-heading"><span class="section-heading__mark"></span>참석자 및 서명</div>
+
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <th class="info-table__label" scope="row">서명방식</th>
+                <td class="info-table__value">
+                  <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="sign-method-form" checked>서명패드</label>
+                    <label class="radio-option"><input type="radio" name="sign-method-form">서명첨부파일</label>
+                    <label class="radio-option"><input type="radio" name="sign-method-form">QR코드</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="detail-counts">
+            <span>총인원: <b>1</b>명</span>
+            <span>내부 참석자 인원: <b>0</b>명</span>
+            <span>서명 완료인원: <b>0</b>명</span>
+            <span>서명 미완료 인원: <b>1</b>명</span>
+          </div>
+
+          <div class="attendee-grid">
+            <div class="attendee-col">
+              <div class="section-heading"><span class="section-heading__mark"></span>내부 참석자</div>
+              <table class="plain-table" id="innerAttendeeTable">
+                <thead>
+                  <tr>
+                    <th>소속</th>
+                    <th>성명</th>
+                    <th style="width: 84px;">
+                      <div class="table-btn-group">
+                        <button type="button" class="table-add-btn" data-add-row="inner" aria-label="내부 참석자 추가"><i class="ri-add-line"></i></button>
+                        <button type="button" class="table-add-btn table-add-btn--primary" data-add-row="inner" aria-label="내부 참석자 검색 추가"><i class="ri-add-line"></i></button>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="3" class="plain-table__empty">내부 참석자를 추가해 주세요.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="attendee-col">
+              <div class="section-heading"><span class="section-heading__mark"></span>협력업체 참석자</div>
+              <table class="plain-table" id="outerAttendeeTable">
+                <thead>
+                  <tr>
+                    <th>소속</th>
+                    <th>성명</th>
+                    <th style="width: 84px;">
+                      <div class="table-btn-group">
+                        <button type="button" class="table-add-btn" data-add-row="outer" aria-label="협력업체 참석자 추가"><i class="ri-add-line"></i></button>
+                        <button type="button" class="table-add-btn table-add-btn--primary" data-add-row="outer" aria-label="협력업체 참석자 검색 추가"><i class="ri-add-line"></i></button>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="text" class="plain-table__row-input" placeholder="소속"></td>
+                    <td><input type="text" class="plain-table__row-input" placeholder="성명"></td>
+                    <td class="table-btn-group"><button type="button" class="table-remove-btn" data-remove-row aria-label="삭제"><i class="ri-subtract-line"></i></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="page-footer">
+        <div class="page-footer__content">
+          <span>ⓒ Samsung</span>
+          <a href="#">개인정보처리방침</a>
+          <span class="page-footer__divider">|</span>
+          <a href="#">이용약관</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</div>
+
+<script>
+  function addRow(tableId, cols) {
+    var table = document.getElementById(tableId);
+    var tbody = table.querySelector('tbody');
+    var emptyRow = tbody.querySelector('.plain-table__empty');
+    if (emptyRow) emptyRow.closest('tr').remove();
+
+    var tr = document.createElement('tr');
+    cols.forEach(function (placeholder) {
+      var td = document.createElement('td');
+      var input = document.createElement('input');
+      input.type = 'text';
+      input.className = 'plain-table__row-input';
+      input.placeholder = placeholder;
+      td.appendChild(input);
+      tr.appendChild(td);
+    });
+    var actionTd = document.createElement('td');
+    actionTd.className = 'table-btn-group';
+    actionTd.innerHTML = '<button type="button" class="table-remove-btn" data-remove-row aria-label="삭제"><i class="ri-subtract-line"></i></button>';
+    tr.appendChild(actionTd);
+    tbody.appendChild(tr);
+  }
+
+  document.querySelectorAll('[data-add-row]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.getAttribute('data-add-row');
+      if (target === 'partner') addRow('partnerTable', ['업체명', '대표자', '사업자등록번호', '주소']);
+      if (target === 'inner') addRow('innerAttendeeTable', ['소속', '성명']);
+      if (target === 'outer') addRow('outerAttendeeTable', ['소속', '성명']);
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    var removeBtn = e.target.closest('[data-remove-row]');
+    if (removeBtn) removeBtn.closest('tr').remove();
+  });
+</script>
+</body>
+</html>

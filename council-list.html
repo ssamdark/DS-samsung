@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>정기협의체</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/style.css?v=10">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+<div class="dash">
+
+  <aside class="dash__sidebar">
+    <div class="brand">
+      <div class="brand__icon">
+        <i class="ri-shield-check-fill"></i>
+      </div>
+      <div class="brand__text">
+        <span class="brand__name">협력사 EHS</span>
+        <span class="brand__sub">통합관리 시스템</span>
+      </div>
+    </div>
+
+    <nav class="nav-list">
+      <div class="nav-item">
+        <i class="ri-focus-3-line nav-item__icon"></i>
+        <span class="nav-item__label">적격수급인 대상 선정</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-file-list-3-line nav-item__icon"></i>
+        <span class="nav-item__label">적격수급인 평가</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-building-2-line nav-item__icon"></i>
+        <span class="nav-item__label">관리대상 협력사</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-search-line nav-item__icon"></i>
+        <span class="nav-item__label">점검</span>
+      </div>
+      <a href="council-list.html" class="nav-item nav-item--active">
+        <i class="ri-calendar-2-line nav-item__icon"></i>
+        <span class="nav-item__label">정기협의체</span>
+      </a>
+      <div class="nav-item">
+        <i class="ri-alert-line nav-item__icon"></i>
+        <span class="nav-item__label">위험성 평가 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-feedback-line nav-item__icon"></i>
+        <span class="nav-item__label">의견 청취 및 위험 신고</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-tools-line nav-item__icon"></i>
+        <span class="nav-item__label">문제점 개선 통합 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-shield-line nav-item__icon"></i>
+        <span class="nav-item__label">안전보건 정보제공</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-building-4-line nav-item__icon"></i>
+        <span class="nav-item__label">기계기구 및 설비 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-speed-line nav-item__icon"></i>
+        <span class="nav-item__label">작업환경측정 결과 등록</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-first-aid-kit-line nav-item__icon"></i>
+        <span class="nav-item__label">인적 사고발생 보고서</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-flask-line nav-item__icon"></i>
+        <span class="nav-item__label">화학물질 MSDS 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-grid-line nav-item__icon"></i>
+        <span class="nav-item__label">공통 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-settings-3-line nav-item__icon"></i>
+        <span class="nav-item__label">시스템 관리</span>
+      </div>
+      <div class="nav-item">
+        <i class="ri-briefcase-line nav-item__icon"></i>
+        <span class="nav-item__label">마이데스크</span>
+      </div>
+    </nav>
+
+    <div class="nav-shortcuts">
+      <a href="site-dashboard.html" class="nav-shortcuts__link">사업장 현황 DASHBOARD</a>
+      <a href="index.html" class="nav-shortcuts__link">실무자 DASHBOARD</a>    </div>
+  </aside>
+
+  <div class="dash__main">
+
+    <header class="topbar">
+      <div class="topbar__actions">
+        <button class="toolbar-btn">
+          한국어
+        </button>
+        <button class="toolbar-btn toolbar-btn--primary">
+          수원 사업장
+        </button>
+        <button class="icon-btn">
+          <i class="ri-notification-3-line"></i>
+          <span class="icon-btn__dot"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <div class="page-header">
+        <h1 class="page-title">정기협의체</h1>
+      </div>
+
+      <div class="panel filter-panel">
+        <div class="filter-row">
+          <span class="filter-row__label">회의명</span>
+          <input type="text" class="filter-input" placeholder="제목">
+        </div>
+        <div class="filter-row">
+          <span class="filter-row__label">회의일자</span>
+          <div class="filter-date-range">
+            <input type="text" class="filter-input filter-input--date" placeholder="시작일">
+            <i class="ri-arrow-right-line filter-date-range__sep"></i>
+            <input type="text" class="filter-input filter-input--date" placeholder="종료일">
+          </div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-row__label">협력업체</span>
+          <div class="combo-tree">
+            <div class="combo-tree__control">
+              <span class="combo-tree__value combo-tree__value--placeholder">협력사 선택</span>
+              <input type="text" class="combo-tree__input" placeholder="협력사 선택" autocomplete="off">
+              <i class="ri-arrow-down-s-line combo-tree__icon combo-tree__icon--chevron"></i>
+              <i class="ri-search-line combo-tree__icon combo-tree__icon--search"></i>
+              <button type="button" class="combo-tree__clear" aria-label="선택 지우기"><i class="ri-close-line"></i></button>
+            </div>
+            <div class="combo-tree__panel">
+              <ul class="tree">
+                <li class="tree__item tree__item--parent tree__item--group">
+                  <div class="tree__row">
+                    <i class="ri-arrow-down-s-line tree__toggle"></i>
+                    <span class="tree__label">협력사</span>
+                  </div>
+                  <ul class="tree__children">
+                    <li class="tree__item tree__item--selectable">
+                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">(주)구츠</span></div>
+                    </li>
+                    <li class="tree__item tree__item--selectable">
+                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">(주)넥노스</span></div>
+                    </li>
+                    <li class="tree__item tree__item--selectable">
+                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">(주)마루건축</span></div>
+                    </li>
+                    <li class="tree__item tree__item--selectable">
+                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">(주)이노베라</span></div>
+                    </li>
+                    <li class="tree__item tree__item--parent tree__item--selectable">
+                      <div class="tree__row">
+                        <i class="ri-arrow-down-s-line tree__toggle"></i>
+                        <span class="tree__label">(주)태암건설</span>
+                      </div>
+                      <ul class="tree__children">
+                        <li class="tree__item tree__item--selectable tree__item--nested">
+                          <div class="tree__row"><i class="ri-corner-down-right-line tree__corner"></i><span class="tree__label">뿌리건축(주)</span></div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="tree__item tree__item--selectable">
+                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">거산건설(주)</span></div>
+                    </li>
+                    <li class="tree__item tree__item--selectable">
+                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">넥스젠건축(주)</span></div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-row__label">작성자</span>
+          <div class="filter-input-icon">
+            <input type="text" class="filter-input" placeholder="선택">
+            <i class="ri-search-line filter-input-icon__icon"></i>
+          </div>
+        </div>
+        <div class="filter-row">
+          <span class="filter-row__label">결재상태</span>
+          <div class="ui-select">
+            <button type="button" class="ui-select__trigger">
+              <span class="ui-select__value">전체</span>
+              <i class="ri-arrow-down-s-line ui-select__chevron"></i>
+            </button>
+            <ul class="ui-select__menu">
+              <li class="ui-select__option ui-select__option--selected">전체</li>
+              <li class="ui-select__option">결재 전</li>
+              <li class="ui-select__option">결재중</li>
+              <li class="ui-select__option">승인</li>
+              <li class="ui-select__option">반려</li>
+              <li class="ui-select__option">회수</li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter-actions">
+          <button class="btn-outline btn-outline--primary">검색</button>
+        </div>
+      </div>
+
+      <div class="panel list-panel">
+        <div class="list-toolbar">
+          <div class="list-toolbar__count">전체 <b>70</b>건</div>
+          <div class="list-toolbar__right">
+            <div class="ui-select ui-select--sm">
+              <button type="button" class="ui-select__trigger">
+                <span class="ui-select__value">30</span>
+                <i class="ri-arrow-down-s-line ui-select__chevron"></i>
+              </button>
+              <ul class="ui-select__menu">
+                <li class="ui-select__option ui-select__option--selected">30</li>
+              </ul>
+            </div>
+            <a href="council-form.html" class="btn-primary">작성</a>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="data-table__no">No</th>
+                <th>회의명</th>
+                <th>회의일자</th>
+                <th>참여 업체 수</th>
+                <th>작성자</th>
+                <th>작성일자</th>
+                <th>첨부파일</th>
+                <th>상태</th>
+                <th>결재상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="data-table__no">70</td>
+                <td><a href="council-detail.html" class="data-table__link">정기협의체 - 광양환경공사</a></td>
+                <td>2026-07-02</td>
+                <td>1개사</td>
+                <td>이현수</td>
+                <td>2026-07-02</td>
+                <td><i class="ri-folder-line attach-icons__folder"></i></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td class="data-table__no">69</td>
+                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
+                <td>2026-07-02</td>
+                <td>1개사</td>
+                <td>이진우</td>
+                <td>2026-07-02</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td class="data-table__no">68</td>
+                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
+                <td>2026-07-02</td>
+                <td>395개사</td>
+                <td>이진우</td>
+                <td>2026-07-02</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td class="data-table__no">67</td>
+                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
+                <td>2026-06-19</td>
+                <td>7개사</td>
+                <td>강신우</td>
+                <td>2026-06-19</td>
+                <td>-</td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td class="data-table__no">66</td>
+                <td><a href="#" class="data-table__link">0604 회의</a></td>
+                <td>2026-06-23</td>
+                <td>3개사</td>
+                <td>최지수</td>
+                <td>2026-06-16</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td class="data-table__no">65</td>
+                <td><a href="#" class="data-table__link">0604 회의</a></td>
+                <td>2026-06-18</td>
+                <td>3개사</td>
+                <td>최지수</td>
+                <td>2026-06-12</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td class="data-table__no">64</td>
+                <td><a href="#" class="data-table__link">0604 회의</a></td>
+                <td>2026-06-17</td>
+                <td>3개사</td>
+                <td>최지수</td>
+                <td>2026-06-12</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td><span class="status-badge status-badge--approved">승인</span></td>
+              </tr>
+              <tr>
+                <td class="data-table__no">63</td>
+                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
+                <td>2026-06-18</td>
+                <td>2개사</td>
+                <td>최지수</td>
+                <td>2026-06-12</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td><span class="status-badge status-badge--approved">승인</span></td>
+              </tr>
+              <tr>
+                <td class="data-table__no">62</td>
+                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
+                <td>2026-06-02</td>
+                <td>7개사</td>
+                <td>곽원지</td>
+                <td>2026-06-12</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td><span class="status-badge status-badge--approved">승인</span></td>
+              </tr>
+              <tr>
+                <td class="data-table__no">61</td>
+                <td><a href="#" class="data-table__link">5월 삼성전자 정기협의체</a></td>
+                <td>2026-05-05</td>
+                <td>2개사</td>
+                <td>이현수</td>
+                <td>2026-06-11</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td><span class="status-badge status-badge--approved">승인</span></td>
+              </tr>
+              <tr>
+                <td class="data-table__no">60</td>
+                <td><a href="#" class="data-table__link">26년 3월 삼성전자 정기협의체</a></td>
+                <td>2026-03-16</td>
+                <td>2개사</td>
+                <td>이현수</td>
+                <td>2026-06-11</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td class="data-table__no">59</td>
+                <td><a href="#" class="data-table__link">26년 2월 삼성전자 정기협의체</a></td>
+                <td>2026-02-09</td>
+                <td>1개사</td>
+                <td>이상호</td>
+                <td>2026-06-11</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td class="data-table__no">58</td>
+                <td><a href="#" class="data-table__link">26년 1월 삼성전자 정기협의체</a></td>
+                <td>2026-01-14</td>
+                <td>1개사</td>
+                <td>최지수</td>
+                <td>2026-06-11</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td class="data-table__no">57</td>
+                <td><a href="#" class="data-table__link">25년 12월 삼성전자 정기협의체</a></td>
+                <td>2025-12-11</td>
+                <td>1개사</td>
+                <td>최지수</td>
+                <td>2026-06-11</td>
+                <td>-</td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td class="data-table__no">56</td>
+                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
+                <td>2026-06-12</td>
+                <td>1개사</td>
+                <td>최지수</td>
+                <td>2026-06-11</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td><span class="status-badge status-badge--approved">승인</span></td>
+              </tr>
+              <tr>
+                <td class="data-table__no">55</td>
+                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
+                <td>2026-06-17</td>
+                <td>4개사</td>
+                <td>최지수</td>
+                <td>2026-06-10</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td><span class="status-badge status-badge--approved">승인</span></td>
+              </tr>
+              <tr>
+                <td class="data-table__no">54</td>
+                <td><a href="#" class="data-table__link">5월 삼성전자 정기협의체</a></td>
+                <td>2026-05-13</td>
+                <td>2개사</td>
+                <td>최지수</td>
+                <td>2026-06-09</td>
+                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
+                <td><span class="status-badge status-badge--done">완료</span></td>
+                <td><span class="status-badge status-badge--approved">승인</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pagination">
+          <button class="pagination__arrow"><i class="ri-arrow-left-s-line"></i></button>
+          <button class="pagination__page pagination__page--active">1</button>
+          <button class="pagination__page">2</button>
+          <button class="pagination__page">3</button>
+          <button class="pagination__arrow"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+      </div>
+
+      <footer class="page-footer">
+        <div class="page-footer__content">
+          <span>ⓒ Samsung</span>
+          <a href="#">개인정보처리방침</a>
+          <span class="page-footer__divider">|</span>
+          <a href="#">이용약관</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</div>
+<script>
+  document.querySelectorAll('.ui-select').forEach(function (sel) {
+    var trigger = sel.querySelector('.ui-select__trigger');
+    var valueEl = sel.querySelector('.ui-select__value');
+    var options = sel.querySelectorAll('.ui-select__option');
+
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var willOpen = !sel.classList.contains('is-open');
+      document.querySelectorAll('.ui-select.is-open').forEach(function (s) { s.classList.remove('is-open'); });
+      if (willOpen) sel.classList.add('is-open');
+    });
+
+    options.forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        options.forEach(function (o) { o.classList.remove('ui-select__option--selected'); });
+        opt.classList.add('ui-select__option--selected');
+        valueEl.textContent = opt.textContent;
+        sel.classList.remove('is-open');
+      });
+    });
+  });
+
+  function initComboTree(root) {
+    var control = root.querySelector('.combo-tree__control');
+    var valueEl = root.querySelector('.combo-tree__value');
+    var input = root.querySelector('.combo-tree__input');
+    var clearBtn = root.querySelector('.combo-tree__clear');
+    var panel = root.querySelector('.combo-tree__panel');
+    var placeholder = valueEl.textContent;
+
+    function openPanel() {
+      document.querySelectorAll('.ui-select.is-open, .combo-tree.is-open').forEach(function (s) { s.classList.remove('is-open'); });
+      root.classList.add('is-open');
+      input.value = '';
+      filterTree('');
+      input.focus();
+    }
+    function closePanel() {
+      root.classList.remove('is-open');
+    }
+
+    control.addEventListener('click', function (e) {
+      if (e.target.closest('.combo-tree__clear')) return;
+      e.stopPropagation();
+      if (root.classList.contains('is-open')) closePanel(); else openPanel();
+    });
+
+    clearBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      root.classList.remove('has-value');
+      root.dataset.value = '';
+      valueEl.textContent = placeholder;
+      valueEl.classList.add('combo-tree__value--placeholder');
+      panel.querySelectorAll('.tree__item--selected').forEach(function (li) { li.classList.remove('tree__item--selected'); });
+    });
+
+    input.addEventListener('click', function (e) { e.stopPropagation(); });
+    input.addEventListener('input', function () { filterTree(input.value); });
+
+    panel.querySelectorAll('.tree__toggle').forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        toggle.closest('.tree__item').classList.toggle('is-collapsed');
+      });
+    });
+
+    panel.querySelectorAll('.tree__item--group > .tree__row').forEach(function (row) {
+      row.addEventListener('click', function (e) {
+        e.stopPropagation();
+        row.closest('.tree__item').classList.toggle('is-collapsed');
+      });
+    });
+
+    panel.querySelectorAll('.tree__item--selectable > .tree__row').forEach(function (row) {
+      row.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var li = row.closest('.tree__item');
+        var label = li.querySelector('.tree__label').textContent;
+        panel.querySelectorAll('.tree__item--selected').forEach(function (s) { s.classList.remove('tree__item--selected'); });
+        li.classList.add('tree__item--selected');
+        root.dataset.value = label;
+        root.classList.add('has-value');
+        valueEl.textContent = label;
+        valueEl.classList.remove('combo-tree__value--placeholder');
+        closePanel();
+      });
+    });
+
+    function filterTree(query) {
+      var q = query.trim().toLowerCase();
+      var items = panel.querySelectorAll('.tree__item');
+      if (!q) {
+        items.forEach(function (li) { li.classList.remove('is-hidden'); });
+        panel.classList.remove('is-filtering');
+        return;
+      }
+      panel.classList.add('is-filtering');
+      panel.querySelectorAll('.tree__item:not(.tree__item--parent)').forEach(function (li) {
+        var label = li.querySelector('.tree__label').textContent.toLowerCase();
+        li.classList.toggle('is-hidden', label.indexOf(q) === -1);
+      });
+      Array.from(panel.querySelectorAll('.tree__item--parent')).reverse().forEach(function (li) {
+        var ownLabel = li.querySelector(':scope > .tree__row .tree__label').textContent.toLowerCase();
+        var ownMatch = ownLabel.indexOf(q) !== -1;
+        var childVisible = !!li.querySelector(':scope > .tree__children > .tree__item:not(.is-hidden)');
+        li.classList.toggle('is-hidden', !ownMatch && !childVisible);
+      });
+    }
+  }
+
+  document.querySelectorAll('.combo-tree').forEach(initComboTree);
+
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.ui-select.is-open').forEach(function (s) { s.classList.remove('is-open'); });
+    document.querySelectorAll('.combo-tree.is-open').forEach(function (s) { s.classList.remove('is-open'); });
+  });
+</script>
+</body>
+</html>
