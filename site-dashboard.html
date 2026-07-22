@@ -7,21 +7,24 @@
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/style.css?v=11">
+<link rel="stylesheet" href="css/style.css?v=30">
 <link href="RemixIcon/remixicon.css" rel="stylesheet">
 </head>
 <body>
 <div class="dash">
 
-  <aside class="dash__sidebar">
+  <aside class="dash__sidebar" id="dashSidebar">
     <div class="brand">
-      <div class="brand__icon">
-        <i class="ri-shield-check-fill"></i>
-      </div>
-      <div class="brand__text">
-        <span class="brand__name">협력사 EHS</span>
-        <span class="brand__sub">통합관리 시스템</span>
-      </div>
+      <a href="index.html" class="brand__link">
+        <div class="brand__icon"><i class="ri-shield-check-fill"></i></div>
+        <div class="brand__text">
+          <span class="brand__name">협력사 EHS</span>
+          <span class="brand__sub">통합관리 시스템</span>
+        </div>
+      </a>
+      <button type="button" class="brand__toggle" id="sidebarToggle" title="사이드바 접기/펼치기" aria-label="사이드바 접기/펼치기">
+        <i class="ri-menu-fold-line"></i>
+      </button>
     </div>
 
     <nav class="nav-list">
@@ -41,10 +44,16 @@
         <i class="ri-search-line nav-item__icon"></i>
         <span class="nav-item__label">점검</span>
       </div>
-      <a href="council-list.html" class="nav-item">
+      <div class="nav-item nav-item--parent" data-nav-toggle>
         <i class="ri-calendar-2-line nav-item__icon"></i>
         <span class="nav-item__label">정기협의체</span>
-      </a>
+        <i class="ri-arrow-down-s-line nav-item__chevron"></i>
+      </div>
+      <div class="nav-submenu">
+        <a href="council-list.html" class="nav-submenu__link">정기협의체 하위01</a>
+        <a href="council-list.html" class="nav-submenu__link">정기협의체 하위02</a>
+        <a href="council-list.html" class="nav-submenu__link">정기협의체 하위03</a>
+      </div>
       <div class="nav-item">
         <i class="ri-alert-line nav-item__icon"></i>
         <span class="nav-item__label">위험성 평가 관리</span>
@@ -100,15 +109,39 @@
 
     <header class="topbar">
       <div class="topbar__actions">
-        <button class="toolbar-btn">
-          한국어
-        </button>
-        <button class="toolbar-btn toolbar-btn--primary">
-          수원 사업장
-        </button>
-        <button class="icon-btn">
+        <div class="ui-select ui-select--topbar ui-select--md">
+          <button type="button" class="ui-select__trigger">
+            <span class="ui-select__value">수원 사업장</span>
+            <i class="ri-arrow-down-s-line ui-select__chevron"></i>
+          </button>
+          <ul class="ui-select__menu">
+            <li class="ui-select__option">광주 사업장</li>
+            <li class="ui-select__option ui-select__option--selected">수원 사업장</li>
+          </ul>
+        </div>
+        <div class="ui-select ui-select--topbar ui-select--sm">
+          <button type="button" class="ui-select__trigger">
+            <span class="ui-select__value">한국어</span>
+            <i class="ri-arrow-down-s-line ui-select__chevron"></i>
+          </button>
+          <ul class="ui-select__menu">
+            <li class="ui-select__option ui-select__option--selected">한국어</li>
+            <li class="ui-select__option">영어</li>
+          </ul>
+        </div>
+        <span class="topbar__user">이성호 <span class="topbar__user-team">[EHS팀]</span></span>
+        <button class="icon-btn" title="알림">
           <i class="ri-notification-3-line"></i>
           <span class="icon-btn__dot"></span>
+        </button>
+        <button class="icon-btn" title="즐겨찾기">
+          <i class="ri-star-line"></i>
+        </button>
+        <button class="icon-btn" title="로그아웃">
+          <i class="ri-logout-box-r-line"></i>
+        </button>
+        <button class="icon-btn" title="메뉴">
+          <i class="ri-menu-line"></i>
         </button>
       </div>
     </header>
@@ -116,7 +149,7 @@
     <main class="content">
 
       <div class="page-header">
-        <h1 class="page-title">사업장 현황 DASHBOARD</h1>
+        <h1 class="page-title">사업장 현황 대시보드</h1>
         <div class="page-meta">
           <span class="page-meta__label">데이터 기준 <span class="page-meta__value">2026-06-22</span></span>
           <button class="toolbar-btn toolbar-btn--primary">
@@ -129,7 +162,7 @@
 
         <div class="portfolio-col">
           <div class="panel panel--compact">
-            <div class="panel__title-group"><span class="stat-card__title">전체 협력사 현황</span><span class="panel__subtitle">Partner Portfolio Analysis</span></div>
+            <div class="panel__title-group"><span class="stat-card__title">전체 협력사 현황</span></div>
             <div class="kpi-row">
               <span class="stat-value">176</span>
               <span class="kpi-pill kpi-pill--blue"><i class="ri-arrow-right-up-line"></i>+21 (13.5%)</span>
@@ -137,7 +170,7 @@
             </div>
           </div>
           <div class="panel panel--compact">
-            <div class="panel__title-group"><span class="stat-card__title">신규 등록 협력사</span><span class="panel__subtitle">Newly Registered Partner</span></div>
+            <div class="panel__title-group"><span class="stat-card__title">신규 등록 협력사</span></div>
             <div class="kpi-row">
               <span class="stat-value">21</span>
               <span class="kpi-pill kpi-pill--blue">당월 (2026. 05)</span>
@@ -148,7 +181,7 @@
 
         <div class="portfolio-col portfolio-col--single">
           <div class="panel panel--compact">
-            <div class="panel__title-group"><span class="panel__title">협력사 포트폴리오 분석</span><span class="panel__subtitle">Partner Portfolio Analysis</span></div>
+            <div class="panel__title-group"><span class="panel__title">협력사 포트폴리오 분석</span></div>
             <div class="donut-legend-row">
               <div class="donut-wrap">
                 <div class="donut donut--sm" style="background:conic-gradient(var(--chart-donut-1) 0 67%, var(--chart-donut-2) 67% 76%, var(--chart-donut-3) 76% 84%, var(--chart-donut-4) 84% 100%)">
@@ -167,7 +200,7 @@
 
         <div class="portfolio-col portfolio-col--single portfolio-col--wide">
           <div class="panel panel--compact">
-            <div class="panel__title-group"><span class="panel__title">환경안전 직무구문별 협력사 포트폴리오 분석</span><span class="panel__subtitle">Portfolio Analysis By Job</span></div>
+            <div class="panel__title-group"><span class="panel__title">환경안전 직무구문별 협력사 포트폴리오 분석</span></div>
             <div class="detail-grid detail-grid--4col">
               <div class="detail-item">
                 <div class="detail-item__head-row">
@@ -224,7 +257,7 @@
 
       <div class="panel">
         <div class="panel__head">
-          <div class="panel__title-group"><span class="panel__title">안전관리 핵심 성과</span><span class="panel__subtitle">Key Performance</span></div>
+          <div class="panel__title-group"><span class="panel__title">안전관리 핵심 성과</span></div>
           <span class="badge--gray badge--gray--plain">기준일 : 2026년 5월 15일</span>
         </div>
         <div class="kpi-perf-grid">
@@ -321,5 +354,48 @@
     </main>
   </div>
 </div>
+<script>
+  document.querySelectorAll('[data-nav-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btn.classList.toggle('is-open');
+    });
+  });
+
+  (function () {
+    var sidebar = document.getElementById('dashSidebar');
+    var toggle = document.getElementById('sidebarToggle');
+    var icon = toggle.querySelector('i');
+    toggle.addEventListener('click', function () {
+      var collapsed = sidebar.classList.toggle('is-collapsed');
+      icon.className = collapsed ? 'ri-menu-unfold-line' : 'ri-menu-fold-line';
+    });
+  })();
+
+  document.querySelectorAll('.ui-select').forEach(function (sel) {
+    var trigger = sel.querySelector('.ui-select__trigger');
+    var valueEl = sel.querySelector('.ui-select__value');
+    var options = sel.querySelectorAll('.ui-select__option');
+
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var willOpen = !sel.classList.contains('is-open');
+      document.querySelectorAll('.ui-select.is-open').forEach(function (s) { s.classList.remove('is-open'); });
+      if (willOpen) sel.classList.add('is-open');
+    });
+
+    options.forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        options.forEach(function (o) { o.classList.remove('ui-select__option--selected'); });
+        opt.classList.add('ui-select__option--selected');
+        valueEl.textContent = opt.textContent;
+        sel.classList.remove('is-open');
+      });
+    });
+  });
+
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.ui-select.is-open').forEach(function (s) { s.classList.remove('is-open'); });
+  });
+</script>
 </body>
 </html>

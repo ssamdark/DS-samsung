@@ -6,21 +6,24 @@
 <title>실무자 대시보드</title>
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/style.css?v=11">
+<link rel="stylesheet" href="css/style.css?v=30">
 <link href="RemixIcon/remixicon.css" rel="stylesheet">
 </head>
 <body>
 <div class="dash">
 
-  <aside class="dash__sidebar">
+  <aside class="dash__sidebar" id="dashSidebar">
     <div class="brand">
-      <div class="brand__icon">
-        <i class="ri-shield-check-fill"></i>
-      </div>
-      <div class="brand__text">
-        <span class="brand__name">협력사 EHS</span>
-        <span class="brand__sub">통합관리 시스템</span>
-      </div>
+      <a href="index.html" class="brand__link">
+        <div class="brand__icon"><i class="ri-shield-check-fill"></i></div>
+        <div class="brand__text">
+          <span class="brand__name">협력사 EHS</span>
+          <span class="brand__sub">통합관리 시스템</span>
+        </div>
+      </a>
+      <button type="button" class="brand__toggle" id="sidebarToggle" title="사이드바 접기/펼치기" aria-label="사이드바 접기/펼치기">
+        <i class="ri-menu-fold-line"></i>
+      </button>
     </div>
 
     <nav class="nav-list">
@@ -40,10 +43,16 @@
         <i class="ri-search-line nav-item__icon"></i>
         <span class="nav-item__label">점검</span>
       </div>
-      <a href="council-list.html" class="nav-item">
+      <div class="nav-item nav-item--parent" data-nav-toggle>
         <i class="ri-calendar-2-line nav-item__icon"></i>
         <span class="nav-item__label">정기협의체</span>
-      </a>
+        <i class="ri-arrow-down-s-line nav-item__chevron"></i>
+      </div>
+      <div class="nav-submenu">
+        <a href="council-list.html" class="nav-submenu__link">정기협의체 하위01</a>
+        <a href="council-list.html" class="nav-submenu__link">정기협의체 하위02</a>
+        <a href="council-list.html" class="nav-submenu__link">정기협의체 하위03</a>
+      </div>
       <div class="nav-item">
         <i class="ri-alert-line nav-item__icon"></i>
         <span class="nav-item__label">위험성 평가 관리</span>
@@ -99,15 +108,39 @@
 
     <header class="topbar">
       <div class="topbar__actions">
-        <button class="toolbar-btn">
-          한국어
-        </button>
-        <button class="toolbar-btn toolbar-btn--primary">
-          수원 사업장
-        </button>
-        <button class="icon-btn">
+        <div class="ui-select ui-select--topbar ui-select--md">
+          <button type="button" class="ui-select__trigger">
+            <span class="ui-select__value">수원 사업장</span>
+            <i class="ri-arrow-down-s-line ui-select__chevron"></i>
+          </button>
+          <ul class="ui-select__menu">
+            <li class="ui-select__option">광주 사업장</li>
+            <li class="ui-select__option ui-select__option--selected">수원 사업장</li>
+          </ul>
+        </div>
+        <div class="ui-select ui-select--topbar ui-select--sm">
+          <button type="button" class="ui-select__trigger">
+            <span class="ui-select__value">한국어</span>
+            <i class="ri-arrow-down-s-line ui-select__chevron"></i>
+          </button>
+          <ul class="ui-select__menu">
+            <li class="ui-select__option ui-select__option--selected">한국어</li>
+            <li class="ui-select__option">영어</li>
+          </ul>
+        </div>
+        <span class="topbar__user">이성호 <span class="topbar__user-team">[EHS팀]</span></span>
+        <button class="icon-btn" title="알림">
           <i class="ri-notification-3-line"></i>
           <span class="icon-btn__dot"></span>
+        </button>
+        <button class="icon-btn" title="즐겨찾기">
+          <i class="ri-star-line"></i>
+        </button>
+        <button class="icon-btn" title="로그아웃">
+          <i class="ri-logout-box-r-line"></i>
+        </button>
+        <button class="icon-btn" title="메뉴">
+          <i class="ri-menu-line"></i>
         </button>
       </div>
     </header>
@@ -115,7 +148,7 @@
     <main class="content">
 
       <div class="page-header">
-        <h1 class="page-title">실무자 DASHBOARD</h1>
+        <h1 class="page-title">실무자 대시보드</h1>
         <div class="page-meta">
           <span class="page-meta__label">데이터 기준 <span class="page-meta__value">2026-06-22</span></span>
           <button class="toolbar-btn toolbar-btn--primary">
@@ -212,7 +245,7 @@
           </div>
         </div>
 
-        <div class="panel panel--roomy-v">
+        <div class="panel">
           <div class="panel__head">
             <div class="panel__title-group"><span class="panel__title">적격수급인 평가 진척</span><span class="panel__subtitle">1차사 · 체크리스트 평가</span></div>
             <a href="#" class="btn-outline btn-outline--sm">평가 요청하기</a>
@@ -324,7 +357,14 @@
           <div class="detail-summary-row">
             <div class="panel__title-group"><span class="panel__title">조치 필요 항목 · 상세</span><span class="panel__subtitle">유형별 · 마감 임박순</span></div>
           </div>
-          <div class="detail-counts"><span class="badge--gray-sm">24건</span><span>만료임박 <b class="legend-label">9건</b></span><span>미식별 <b class="legend-label">11건</b></span><span>미조치 <b class="legend-label">4건</b></span></div>
+          <div class="detail-counts detail-counts--split">
+            <div class="stat-value-row"><span class="stat-value">24</span><span class="stat-unit">건</span></div>
+            <div class="detail-counts__group">
+              <span>만료임박 <b class="legend-label">9건</b></span>
+              <span>미식별 <b class="legend-label">11건</b></span>
+              <span>미조치 <b class="legend-label">4건</b></span>
+            </div>
+          </div>
           <div class="detail-grid">
             <div class="detail-item">
               <div class="detail-item__head-row">
@@ -365,5 +405,48 @@
     </main>
   </div>
 </div>
+<script>
+  document.querySelectorAll('[data-nav-toggle]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      btn.classList.toggle('is-open');
+    });
+  });
+
+  (function () {
+    var sidebar = document.getElementById('dashSidebar');
+    var toggle = document.getElementById('sidebarToggle');
+    var icon = toggle.querySelector('i');
+    toggle.addEventListener('click', function () {
+      var collapsed = sidebar.classList.toggle('is-collapsed');
+      icon.className = collapsed ? 'ri-menu-unfold-line' : 'ri-menu-fold-line';
+    });
+  })();
+
+  document.querySelectorAll('.ui-select').forEach(function (sel) {
+    var trigger = sel.querySelector('.ui-select__trigger');
+    var valueEl = sel.querySelector('.ui-select__value');
+    var options = sel.querySelectorAll('.ui-select__option');
+
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var willOpen = !sel.classList.contains('is-open');
+      document.querySelectorAll('.ui-select.is-open').forEach(function (s) { s.classList.remove('is-open'); });
+      if (willOpen) sel.classList.add('is-open');
+    });
+
+    options.forEach(function (opt) {
+      opt.addEventListener('click', function () {
+        options.forEach(function (o) { o.classList.remove('ui-select__option--selected'); });
+        opt.classList.add('ui-select__option--selected');
+        valueEl.textContent = opt.textContent;
+        sel.classList.remove('is-open');
+      });
+    });
+  });
+
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.ui-select.is-open').forEach(function (s) { s.classList.remove('is-open'); });
+  });
+</script>
 </body>
 </html>
