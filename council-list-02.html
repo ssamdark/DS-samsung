@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>정기협의체</title>
+<title>게시판 UI 컴포넌트 모음</title>
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/tokens.css">
@@ -50,8 +50,8 @@
         <i class="ri-arrow-down-s-line nav-item__chevron"></i>
       </div>
       <div class="nav-submenu">
-        <a href="council-list.html" class="nav-submenu__link nav-submenu__link--active">정기협의체</a>
-        <a href="council-list-02.html" class="nav-submenu__link">게시판 UI 컴포넌트 모음</a>
+        <a href="council-list.html" class="nav-submenu__link">정기협의체</a>
+        <a href="council-list-02.html" class="nav-submenu__link nav-submenu__link--active">게시판 UI 컴포넌트 모음</a>
       </div>
       <div class="nav-item">
         <i class="ri-alert-line nav-item__icon"></i>
@@ -150,111 +150,89 @@
       <nav class="breadcrumb breadcrumb--top" aria-label="breadcrumb">
         <a href="index.html" class="breadcrumb__link"><i class="ri-home-4-line"></i>HOME</a>
         <i class="ri-arrow-right-s-line breadcrumb__sep"></i>
-        <span class="breadcrumb__current">정기협의체</span>
+        <span class="breadcrumb__current">게시판 UI 컴포넌트 모음</span>
       </nav>
 
       <div class="page-header">
-        <h1 class="page-title">정기협의체</h1>
+        <h1 class="page-title">게시판 UI 컴포넌트 모음</h1>
       </div>
 
-      <div class="panel filter-panel">
-        <div class="filter-row">
-          <span class="filter-row__label">회의명</span>
-          <input type="text" class="filter-input" placeholder="제목">
-        </div>
-        <div class="filter-row">
-          <span class="filter-row__label">회의일자</span>
-          <div class="filter-date-range">
-            <input type="text" class="filter-input filter-input--date" placeholder="시작일">
-            <i class="ri-arrow-right-line filter-date-range__sep"></i>
-            <input type="text" class="filter-input filter-input--date" placeholder="종료일">
+      <div class="panel component-showcase">
+        <div class="showcase-row">
+          <span class="showcase-row__label">버튼위계</span>
+          <div class="showcase-row__content">
+            <p class="button-matrix__intro">중요도는 <b>오른쪽부터</b> 순서입니다 — 버튼을 여러 개 나란히 배치할 때 가장 오른쪽에 CTA(1단계)를, 왼쪽으로 갈수록 낮은 위계를 놓습니다. (예: 목록 · 삭제 · 수정 · 보고서 출력 · 결재상신)</p>
+            <table class="button-matrix">
+              <thead>
+                <tr>
+                  <th>스타일 위계 (Variant)</th>
+                  <th>Large <code>40px</code><span class="button-matrix__col-desc">본문 영역 기본 (검색·작성·결재상신 등)</span></th>
+                  <th>Medium <code>36px</code><span class="button-matrix__col-desc">topbar 전용 (언어·사업장 선택, 알림 등)</span></th>
+                  <th>Small <code>32px</code><span class="button-matrix__col-desc">컴팩트 — 테이블/리스트 내부</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    1. Primary (CTA)
+                    <code class="button-matrix__variant-code">.btn-primary</code>
+                  </th>
+                  <td><button class="btn-primary">결재상신</button></td>
+                  <td class="button-matrix__na">해당없음</td>
+                  <td class="button-matrix__na">미지원</td>
+                </tr>
+                <tr>
+                  <th>
+                    2. Secondary (보조 CTA)
+                    <code class="button-matrix__variant-code">.btn-outline.btn-outline--primary</code>
+                  </th>
+                  <td><button class="btn-outline btn-outline--primary">보고서 출력</button></td>
+                  <td class="button-matrix__na">해당없음</td>
+                  <td>
+                    <button class="btn-outline btn-outline--primary btn-outline--sm">보고서 출력</button>
+                    <code class="button-matrix__variant-code">+.btn-outline--sm</code>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    3. Neutral (일반 액션)
+                    <code class="button-matrix__variant-code">.btn-outline</code>
+                  </th>
+                  <td><button class="btn-outline">목록</button></td>
+                  <td class="button-matrix__na">해당없음</td>
+                  <td>
+                    <button class="btn-outline btn-outline--sm">서명하기</button>
+                    <code class="button-matrix__variant-code">+.btn-outline--sm</code>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    4. Icon Only
+                    <code class="button-matrix__variant-code">.icon-btn / .table-add-btn 등</code>
+                  </th>
+                  <td class="button-matrix__na">해당없음</td>
+                  <td>
+                    <button class="icon-btn"><i class="ri-notification-3-line"></i></button>
+                    <code class="button-matrix__variant-code">.icon-btn</code>
+                  </td>
+                  <td>
+                    <button class="table-add-btn"><i class="ri-add-line"></i></button>
+                    <code class="button-matrix__variant-code">.table-add-btn</code>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </div>
-        <div class="filter-row">
-          <span class="filter-row__label">협력업체</span>
-          <div class="combo-tree">
-            <div class="combo-tree__control">
-              <span class="combo-tree__value combo-tree__value--placeholder">협력사 선택</span>
-              <input type="text" class="combo-tree__input" placeholder="협력사 선택" autocomplete="off">
-              <i class="ri-arrow-down-s-line combo-tree__icon combo-tree__icon--chevron"></i>
-              <i class="ri-search-line combo-tree__icon combo-tree__icon--search"></i>
-              <button type="button" class="combo-tree__clear" aria-label="선택 지우기"><i class="ri-close-line"></i></button>
-            </div>
-            <div class="combo-tree__panel">
-              <ul class="tree">
-                <li class="tree__item tree__item--parent tree__item--group">
-                  <div class="tree__row">
-                    <i class="ri-arrow-down-s-line tree__toggle"></i>
-                    <span class="tree__label">협력사</span>
-                  </div>
-                  <ul class="tree__children">
-                    <li class="tree__item tree__item--selectable">
-                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">(주)구츠</span></div>
-                    </li>
-                    <li class="tree__item tree__item--selectable">
-                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">(주)넥노스</span></div>
-                    </li>
-                    <li class="tree__item tree__item--selectable">
-                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">(주)마루건축</span></div>
-                    </li>
-                    <li class="tree__item tree__item--selectable">
-                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">(주)이노베라</span></div>
-                    </li>
-                    <li class="tree__item tree__item--parent tree__item--selectable">
-                      <div class="tree__row">
-                        <i class="ri-arrow-down-s-line tree__toggle"></i>
-                        <span class="tree__label">(주)태암건설</span>
-                      </div>
-                      <ul class="tree__children">
-                        <li class="tree__item tree__item--selectable tree__item--nested">
-                          <div class="tree__row"><i class="ri-corner-down-right-line tree__corner"></i><span class="tree__label">뿌리건축(주)</span></div>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="tree__item tree__item--selectable">
-                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">거산건설(주)</span></div>
-                    </li>
-                    <li class="tree__item tree__item--selectable">
-                      <div class="tree__row"><span class="tree__bullet">-</span><span class="tree__label">넥스젠건축(주)</span></div>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="filter-row">
-          <span class="filter-row__label">작성자</span>
-          <div class="filter-input-icon">
-            <input type="text" class="filter-input" placeholder="선택">
-            <i class="ri-search-line filter-input-icon__icon"></i>
-          </div>
-        </div>
-        <div class="filter-row">
-          <span class="filter-row__label">결재상태</span>
-          <div class="ui-select">
-            <button type="button" class="ui-select__trigger">
-              <span class="ui-select__value">전체</span>
-              <i class="ri-arrow-down-s-line ui-select__chevron"></i>
-            </button>
-            <ul class="ui-select__menu">
-              <li class="ui-select__option ui-select__option--selected">전체</li>
-              <li class="ui-select__option">결재 전</li>
-              <li class="ui-select__option">결재중</li>
-              <li class="ui-select__option">승인</li>
-              <li class="ui-select__option">반려</li>
-              <li class="ui-select__option">회수</li>
-            </ul>
-          </div>
-        </div>
-        <div class="filter-actions">
-          <button class="btn-outline btn-outline--primary">검색</button>
         </div>
       </div>
 
       <div class="panel list-panel">
         <div class="list-toolbar">
-          <div class="list-toolbar__count">전체 <b>70</b>건</div>
+          <div class="inline-group">
+            <div class="list-toolbar__count">전체 <b>70</b>건</div>
+            <button class="btn-outline btn-outline--sm">엑셀 다운로드</button>
+            <button class="btn-outline btn-outline--sm">엑셀 상세 다운로드</button>
+          </div>
           <div class="list-toolbar__right">
             <div class="ui-select ui-select--sm">
               <button type="button" class="ui-select__trigger">
@@ -270,9 +248,10 @@
         </div>
 
         <div class="table-wrap">
-          <table class="data-table">
+          <table class="data-table data-table--checkbox">
             <thead>
               <tr>
+                <th class="data-table__checkbox"><input type="checkbox" id="selectAllRows" aria-label="전체 선택"></th>
                 <th class="data-table__no">No</th>
                 <th>회의명</th>
                 <th>회의일자</th>
@@ -286,6 +265,7 @@
             </thead>
             <tbody>
               <tr>
+                <td class="data-table__checkbox"><input type="checkbox" class="row-select" aria-label="선택"></td>
                 <td class="data-table__no">70</td>
                 <td><a href="council-detail.html" class="data-table__link">정기협의체 - 광양환경공사</a></td>
                 <td>2026-07-02</td>
@@ -294,9 +274,10 @@
                 <td>2026-07-02</td>
                 <td><i class="ri-folder-line attach-icons__folder"></i></td>
                 <td>완료</td>
-                <td>-</td>
+                <td>승인</td>
               </tr>
               <tr>
+                <td class="data-table__checkbox"><input type="checkbox" class="row-select" aria-label="선택"></td>
                 <td class="data-table__no">69</td>
                 <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
                 <td>2026-07-02</td>
@@ -305,9 +286,10 @@
                 <td>2026-07-02</td>
                 <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
                 <td>완료</td>
-                <td>-</td>
+                <td>승인</td>
               </tr>
               <tr>
+                <td class="data-table__checkbox"><input type="checkbox" class="row-select" aria-label="선택"></td>
                 <td class="data-table__no">68</td>
                 <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
                 <td>2026-07-02</td>
@@ -316,9 +298,10 @@
                 <td>2026-07-02</td>
                 <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
                 <td>완료</td>
-                <td>-</td>
+                <td>승인</td>
               </tr>
               <tr>
+                <td class="data-table__checkbox"><input type="checkbox" class="row-select" aria-label="선택"></td>
                 <td class="data-table__no">67</td>
                 <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
                 <td>2026-06-19</td>
@@ -327,9 +310,10 @@
                 <td>2026-06-19</td>
                 <td>-</td>
                 <td>완료</td>
-                <td>-</td>
+                <td>승인</td>
               </tr>
               <tr>
+                <td class="data-table__checkbox"><input type="checkbox" class="row-select" aria-label="선택"></td>
                 <td class="data-table__no">66</td>
                 <td><a href="#" class="data-table__link">0604 회의</a></td>
                 <td>2026-06-23</td>
@@ -338,136 +322,16 @@
                 <td>2026-06-16</td>
                 <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
                 <td>완료</td>
-                <td>-</td>
+                <td>승인</td>
               </tr>
               <tr>
+                <td class="data-table__checkbox"><input type="checkbox" class="row-select" aria-label="선택"></td>
                 <td class="data-table__no">65</td>
                 <td><a href="#" class="data-table__link">0604 회의</a></td>
                 <td>2026-06-18</td>
                 <td>3개사</td>
                 <td>최지수</td>
                 <td>2026-06-12</td>
-                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
-                <td>완료</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">64</td>
-                <td><a href="#" class="data-table__link">0604 회의</a></td>
-                <td>2026-06-17</td>
-                <td>3개사</td>
-                <td>최지수</td>
-                <td>2026-06-12</td>
-                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
-                <td>완료</td>
-                <td>승인</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">63</td>
-                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
-                <td>2026-06-18</td>
-                <td>2개사</td>
-                <td>최지수</td>
-                <td>2026-06-12</td>
-                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
-                <td>완료</td>
-                <td>승인</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">62</td>
-                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
-                <td>2026-06-02</td>
-                <td>7개사</td>
-                <td>곽원지</td>
-                <td>2026-06-12</td>
-                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
-                <td>완료</td>
-                <td>승인</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">61</td>
-                <td><a href="#" class="data-table__link">5월 삼성전자 정기협의체</a></td>
-                <td>2026-05-05</td>
-                <td>2개사</td>
-                <td>이현수</td>
-                <td>2026-06-11</td>
-                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
-                <td>완료</td>
-                <td>승인</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">60</td>
-                <td><a href="#" class="data-table__link">26년 3월 삼성전자 정기협의체</a></td>
-                <td>2026-03-16</td>
-                <td>2개사</td>
-                <td>이현수</td>
-                <td>2026-06-11</td>
-                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
-                <td>완료</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">59</td>
-                <td><a href="#" class="data-table__link">26년 2월 삼성전자 정기협의체</a></td>
-                <td>2026-02-09</td>
-                <td>1개사</td>
-                <td>이상호</td>
-                <td>2026-06-11</td>
-                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
-                <td>완료</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">58</td>
-                <td><a href="#" class="data-table__link">26년 1월 삼성전자 정기협의체</a></td>
-                <td>2026-01-14</td>
-                <td>1개사</td>
-                <td>최지수</td>
-                <td>2026-06-11</td>
-                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
-                <td>완료</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">57</td>
-                <td><a href="#" class="data-table__link">25년 12월 삼성전자 정기협의체</a></td>
-                <td>2025-12-11</td>
-                <td>1개사</td>
-                <td>최지수</td>
-                <td>2026-06-11</td>
-                <td>-</td>
-                <td>완료</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">56</td>
-                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
-                <td>2026-06-12</td>
-                <td>1개사</td>
-                <td>최지수</td>
-                <td>2026-06-11</td>
-                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
-                <td>완료</td>
-                <td>승인</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">55</td>
-                <td><a href="#" class="data-table__link">6월 삼성전자 정기협의체</a></td>
-                <td>2026-06-17</td>
-                <td>4개사</td>
-                <td>최지수</td>
-                <td>2026-06-10</td>
-                <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
-                <td>완료</td>
-                <td>승인</td>
-              </tr>
-              <tr>
-                <td class="data-table__no">54</td>
-                <td><a href="#" class="data-table__link">5월 삼성전자 정기협의체</a></td>
-                <td>2026-05-13</td>
-                <td>2개사</td>
-                <td>최지수</td>
-                <td>2026-06-09</td>
                 <td><div class="attach-icons"><i class="ri-attachment-2"></i><i class="ri-eye-line"></i></div></td>
                 <td>완료</td>
                 <td>승인</td>
@@ -499,6 +363,23 @@
   </div>
 </div>
 <script>
+  (function () {
+    var selectAll = document.getElementById('selectAllRows');
+    var rowChecks = document.querySelectorAll('.row-select');
+    if (selectAll) {
+      selectAll.addEventListener('change', function () {
+        rowChecks.forEach(function (cb) { cb.checked = selectAll.checked; });
+      });
+      rowChecks.forEach(function (cb) {
+        cb.addEventListener('change', function () {
+          var checkedCount = document.querySelectorAll('.row-select:checked').length;
+          selectAll.checked = checkedCount === rowChecks.length;
+          selectAll.indeterminate = checkedCount > 0 && checkedCount < rowChecks.length;
+        });
+      });
+    }
+  })();
+
   document.querySelectorAll('[data-nav-toggle]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       btn.classList.toggle('is-open');
