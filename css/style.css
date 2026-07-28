@@ -148,7 +148,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .page-tabs::after { content: ""; flex: 1; align-self: flex-end; height: 0; border-bottom: 1px solid var(--gray-500); }
 .page-tabs__item {
   height: 40px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;
-  padding: 0 40px; font-size: 16px; font-weight: var(--fw-semibold);
+  padding: 0 40px; font-size: 15px; font-weight: var(--fw-regular);
   color: var(--text-tertiary); background: var(--gray-300); border: 1px solid var(--gray-400);
   cursor: pointer;
 }
