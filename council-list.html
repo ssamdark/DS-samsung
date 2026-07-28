@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>정기협의체</title>
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/png" href="images/logo.png?v=8">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/style.css?v=41">
+<link rel="stylesheet" href="css/style.css?v=74">
 <link href="RemixIcon/remixicon.css" rel="stylesheet">
 </head>
 <body>
@@ -155,6 +155,16 @@
 
       <div class="page-header">
         <h1 class="page-title">정기협의체</h1>
+      </div>
+
+      <div class="page-tabs">
+        <button type="button" class="page-tabs__item page-tabs__item--active">전체</button>
+        <button type="button" class="page-tabs__item">순회점검</button>
+        <button type="button" class="page-tabs__item">안전 소통채널</button>
+        <button type="button" class="page-tabs__item">합동점검</button>
+        <button type="button" class="page-tabs__item">기계기구설비 점검</button>
+        <button type="button" class="page-tabs__item">작업환경측정</button>
+        <button type="button" class="page-tabs__item">화학물질 위험성평가</button>
       </div>
 
       <div class="panel filter-panel">
@@ -499,6 +509,13 @@
   </div>
 </div>
 <script>
+  document.querySelectorAll('.page-tabs__item').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.page-tabs__item').forEach(function (t) { t.classList.remove('page-tabs__item--active'); });
+      tab.classList.add('page-tabs__item--active');
+    });
+  });
+
   document.querySelectorAll('[data-nav-toggle]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       btn.classList.toggle('is-open');

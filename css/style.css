@@ -144,6 +144,36 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .page-meta__label { font-size: var(--fs-small); color: var(--text-tertiary); }
 .page-meta__value { font-weight: var(--fw-semibold); color: var(--gray-800); }
 
+.page-tabs { display: flex; }
+.page-tabs::after { content: ""; flex: 1; align-self: flex-end; height: 0; border-bottom: 1px solid var(--gray-500); }
+.page-tabs__item {
+  height: 40px; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center;
+  padding: 0 40px; font-size: 16px; font-weight: var(--fw-semibold);
+  color: var(--text-tertiary); background: var(--gray-300); border: 1px solid var(--gray-400);
+  cursor: pointer;
+}
+.page-tabs__item + .page-tabs__item { margin-left: -1px; }
+.page-tabs__item:first-child { border-top-left-radius: var(--radius-sm); }
+.page-tabs__item:last-child { border-top-right-radius: var(--radius-sm); }
+.page-tabs__item:hover { color: var(--text-primary); }
+.page-tabs__item--active {
+  background: var(--bg-primary); color: var(--primary); font-weight: var(--fw-bold);
+  border-top: 1px solid var(--gray-500); border-bottom: 2px solid var(--primary);
+  border-left: 1px solid var(--gray-500); border-right: 1px solid var(--gray-500);
+  position: relative; z-index: 2; margin-bottom: -2px;
+}
+
+.page-tabs--underline { border-bottom: 1px solid var(--gray-400); }
+.page-tabs--underline .page-tabs__item {
+  background: transparent; border: none; border-radius: 0; margin-left: 0;
+  border-bottom: 2px solid transparent;
+}
+.page-tabs--underline .page-tabs__item:hover { color: var(--text-primary); }
+.page-tabs--underline .page-tabs__item--active {
+  background: transparent; border: none; border-bottom: 2px solid var(--primary);
+  position: static; z-index: auto; margin-bottom: 0;
+}
+
 .breadcrumb { display: flex; align-items: center; gap: 4px; font-size: var(--fs-caption); color: var(--text-tertiary); }
 .breadcrumb--top { margin-top: -40px; }
 .breadcrumb__link { display: inline-flex; align-items: center; gap: 4px; color: var(--text-tertiary); }
