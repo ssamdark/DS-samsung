@@ -469,6 +469,9 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .kpi-perf-card__pct { font-size: 38px; font-weight: var(--fw-bold); letter-spacing: -0.02em; } /* KPI 디스플레이, 3단 체계 예외 */
 .kpi-perf-card__pct-sign { font-size: var(--fs-body); font-weight: var(--fw-semibold); margin-left: 2px; }
 .kpi-perf-card__stats { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-size: var(--fs-caption); opacity: 0.85; }
+.kpi-perf-card--text { border-color: var(--gray-700); } /* 텍스트형 카드, 차트 카드와 구분 */
+.kpi-perf-card__info {border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px; display: flex; flex-direction: column; gap: 8px; background: var(--gray-150); font-size: var(--fs-small); font-weight: 500; color: var(--text-primary); line-height: var(--lh-title); } /* 텍스트형 카드 본문, .news-item 박스와 동일 */
+.kpi-perf-card__info-label { font-weight: var(--fw-semibold); }
 .progress--lg { height: 14px; display: flex; background: var(--gray-300); overflow: hidden; }
 .progress--lg .progress__fill { border-radius: 0; }
 
