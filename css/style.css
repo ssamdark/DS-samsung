@@ -214,6 +214,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .badge--positive { color: var(--status-positive); background: var(--status-positive-bg); }
 .badge--primary { color: var(--primary); background: var(--primary-50); }
 .badge--negative { color: var(--status-negative); background: var(--status-negative-bg); }
+.badge--dark { color: var(--text-inverse); background: var(--gray-800); }
 .badge--positive-pill { font-size: var(--fs-caption); font-weight: var(--fw-bold); color: var(--status-positive); background: var(--status-positive-bg); border-radius: var(--radius-xs); padding: 5px 11px; }
 .badge--gray { font-size: var(--fs-caption); font-weight: var(--fw-bold); color: var(--text-primary); background: var(--gray-300); padding: 2px 7px; border-radius: var(--radius-xs); }
 .badge--gray--plain { background: none; padding: 0; }
@@ -476,13 +477,17 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .progress--lg .progress__fill { border-radius: 0; }
 
 /* --- Row 3: 안전보건뉴스 / 공지사항 / 캘린더 --- */
-.bottom-grid--site { grid-template-columns: 1fr 1fr 1fr; }
+.bottom-grid--site { grid-template-columns: repeat(3, minmax(0, 1fr)); } /* 긴 nowrap 텍스트가 칸을 늘리지 않도록 */
+.bottom-grid--site .notice-list { flex: 1; } /* 패널 하단까지 채워 옆 안전소통채널 박스와 바텀 라인 맞춤 */
 
 .news-list { display: flex; flex-direction: column; gap: 12px; }
 .news-item { border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 14px; display: flex; flex-direction: column; gap: 8px; background: var(--gray-150); }
 .news-item__title { font-size: var(--fs-small); font-weight: 500; color: var(--text-primary); line-height: var(--lh-title); }
+.news-item--badge { flex-direction: row; align-items: baseline; gap: 12px; } /* 배지 + 본문(제목·날짜) 내어쓰기 */
+.news-item--badge > .badge { flex: 0 0 auto; font-weight: var(--fw-regular); box-sizing: border-box; min-width: calc(5em + 16px); text-align: center; white-space: nowrap; } /* 5글자 기준 동일 폭 */
+.news-item__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.news-item__desc { font-size: var(--fs-caption); color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } /* 본문 미리보기 1줄 말줄임 */
 .news-item__date { font-size: var(--fs-caption); color: var(--text-tertiary); }
-
 .notice-featured { display: flex; gap: 14px; padding-bottom: 16px; border-bottom: 1px solid var(--border-color); }
 .notice-date-badge { flex: 0 0 52px; height: 52px; border-radius: var(--radius-md); background: var(--primary); color: var(--text-inverse); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
 .notice-date-badge__day { font-size: var(--fs-body); font-weight: var(--fw-bold); line-height: 1; }
