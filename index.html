@@ -245,7 +245,7 @@
           </div>
         </div>
 
-        <div class="panel">
+        <div class="panel panel--span-2">
           <div class="panel__head">
             <div class="panel__title-group"><span class="panel__title">적격수급인 평가 진척</span><span class="panel__subtitle">1차사 · 체크리스트 평가</span></div>
             <a href="#" class="btn-outline btn-outline--sm">평가 요청하기</a>
@@ -278,26 +278,26 @@
               </div>
               <p class="stage__note">서류 제출 메일 발송(자동/수동) 이후 협력사 회신 → 체크리스트 평가 → 보완 단계로 추적합니다.</p>
             </div>
+          </div>
+        </div>
 
-            <div class="col" style="gap:14px">
-              <div class="inline-group"><span class="eval-col__title">EHS 활동 현황</span><span class="panel__subtitle">이번 달 실시 건수</span></div>
-              <div class="ehs-list ehs-list--compact">
-                <div class="ehs-row"><span class="ehs-row__label">순회점검</span><span class="ehs-row__value">31<span class="ehs-row__unit">건</span></span></div>
-                <div class="ehs-row"><span class="ehs-row__label">합동점검</span><span class="ehs-row__value">9<span class="ehs-row__unit">건</span></span></div>
-                <div class="ehs-row"><span class="ehs-row__label">기계기구설비점검</span><span class="ehs-row__value">53<span class="ehs-row__unit">건</span></span></div>
-                <div class="ehs-row"><span class="ehs-row__label">정기 위험성평가</span><span class="ehs-row__value">34<span class="ehs-row__unit">건</span></span></div>
-                <div class="ehs-row"><span class="ehs-row__label">작업환경측정</span><span class="ehs-row__value">24<span class="ehs-row__unit">건</span></span></div>
-              </div>
-              <div class="panel__footer panel__footer--plain">
-                <div class="activity-row__labels"><span class="activity-row__title">정기협의체</span><span class="stat-footer__label">당월 실시 여부</span></div>
-                <span class="badge--positive-pill">이번 달 실시 완료</span>
-              </div>
-            </div>
+        <div class="panel panel--compact">
+          <div class="panel__title-group"><span class="panel__title">EHS 활동 현황</span><span class="panel__subtitle">이번 달 실시 건수</span></div>
+          <div class="ehs-list">
+            <div class="ehs-row"><span class="ehs-row__label">순회점검</span><span class="ehs-row__value">31<span class="ehs-row__unit">건</span></span></div>
+            <div class="ehs-row"><span class="ehs-row__label">합동점검</span><span class="ehs-row__value">9<span class="ehs-row__unit">건</span></span></div>
+            <div class="ehs-row"><span class="ehs-row__label">기계기구설비점검</span><span class="ehs-row__value">53<span class="ehs-row__unit">건</span></span></div>
+            <div class="ehs-row"><span class="ehs-row__label">정기 위험성평가</span><span class="ehs-row__value">34<span class="ehs-row__unit">건</span></span></div>
+            <div class="ehs-row"><span class="ehs-row__label">작업환경측정</span><span class="ehs-row__value">24<span class="ehs-row__unit">건</span></span></div>
+          </div>
+          <div class="panel__footer panel__footer--plain">
+            <div class="activity-row__labels"><span class="activity-row__title">정기협의체</span><span class="stat-footer__label">당월 실시 여부</span></div>
+            <span class="badge--positive-pill">이번 달 실시 완료</span>
           </div>
         </div>
       </div>
 
-      <div class="panel-grid">
+      <div class="panel-grid panel-grid--bottom">
 
         <div class="panel panel--compact panel--fluid">
           <div class="panel__head">
@@ -328,47 +328,86 @@
           <div class="issue-count-row">
             <div class="issue-count-group"><span class="issue-count">146</span><span class="issue-count__label">전체 문제점</span></div>
           </div>
-          <div class="segment-bar">
-            <div class="segment-bar__seg segment-bar__seg--positive" style="width:53.4%">78</div>
-            <div class="segment-bar__seg segment-bar__seg--primary" style="width:30.1%">44</div>
-            <div class="segment-bar__seg segment-bar__seg--caution" style="width:12.3%">18</div>
-            <div class="segment-bar__seg segment-bar__seg--negative" style="width:4.2%">6</div>
+          <div class="issue-breakdown">
+            <div class="segment-bar">
+              <div class="segment-bar__seg segment-bar__seg--positive" style="width:53.4%">78</div>
+              <div class="segment-bar__seg segment-bar__seg--primary" style="width:30.1%">44</div>
+              <div class="segment-bar__seg segment-bar__seg--caution" style="width:12.3%">18</div>
+              <div class="segment-bar__seg segment-bar__seg--negative" style="width:4.2%">6</div>
+            </div>
+            <div class="legend-list legend-list--narrow">
+              <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--positive"></span><span class="legend-label">완료</span></div><span class="legend-value">78</span></div>
+              <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--primary"></span><span class="legend-label">조치중</span></div><span class="legend-value">44</span></div>
+              <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--caution"></span><span class="legend-label">미조치</span></div><span class="legend-value">18</span></div>
+              <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--negative"></span><span class="legend-label">지연 (기한 초과)</span></div><span class="legend-value">6</span></div>
+            </div>
           </div>
-          <div class="legend-list legend-list--narrow">
-            <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--positive"></span><span class="legend-label">완료</span></div><span class="legend-value">78</span></div>
-            <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--primary"></span><span class="legend-label">조치중</span></div><span class="legend-value">44</span></div>
-            <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--caution"></span><span class="legend-label">미조치</span></div><span class="legend-value">18</span></div>
-            <div class="legend-row"><div class="inline-group"><span class="legend-dot legend-dot--negative"></span><span class="legend-label">지연 (기한 초과)</span></div><span class="legend-value">6</span></div>
-          </div>
-          <div class="panel__footnote">주요 발생경로 · 순회점검 <b class="legend-label">41%</b> · 기계기구설비 22% · 합동점검 16% · 아차사고 11% · 기타 10%</div>
+          
         </div>
 
         <div class="panel panel--compact panel--fluid">
-          <div class="panel__head">
-            <div class="panel__title-group"><span class="panel__title">문제점 출처</span></div>
-            <a href="#" class="btn-outline btn-outline--sm">더보기</a>
+          <div class="detail-summary-row">
+            <div class="panel__title-group"><span class="panel__title">문제점 출처</span><span class="panel__subtitle">발생 건수 · 지연 건수 · 상위4개</span></div>
+            <a href="#" class="btn-outline btn-outline--sm">전체 보기</a>
           </div>
-          <div class="news-list news-list--badge-lg">
-            <div class="news-item news-item--badge">
-              <span class="badge badge--dark">순회점검</span>
-              <div class="news-item__body">
-                <span class="news-item__title">3공장 소화기 압력 미달 2개소</span>
-                <span class="news-item__desc">B동 2층 복도, 교체 요청 등록</span>
+          <div class="detail-grid source-tile-grid">
+            <div class="detail-item source-tile">
+              <span class="source-tile__label">순회점검</span>
+              <div class="source-tile__value-row">
+                <div class="detail-item__value-row"><span class="detail-item__value">39</span><span class="detail-item__unit">건</span></div>
+                <span class="badge badge--negative">지연 29</span>
+              </div>
+              <div class="segment-bar segment-bar--thin">
+                <div class="segment-bar__seg segment-bar__seg--positive" style="width:15.4%"></div>
+                <div class="segment-bar__seg segment-bar__seg--primary" style="width:10.3%"></div>
+                <div class="segment-bar__seg segment-bar__seg--negative" style="width:74.3%"></div>
               </div>
             </div>
-            <div class="news-item news-item--badge">
-              <span class="badge badge--dark">합동점검</span>
-              <div class="news-item__body">
-                <span class="news-item__title">고소작업대 안전난간 미설치</span>
-                <span class="news-item__desc">1공장 설비동, 협력사 시정 조치 요청</span>
+            <div class="detail-item source-tile">
+              <span class="source-tile__label">합동점검</span>
+              <div class="source-tile__value-row">
+                <div class="detail-item__value-row"><span class="detail-item__value">27</span><span class="detail-item__unit">건</span></div>
+                <span class="badge badge--negative">지연 17</span>
+              </div>
+              <div class="segment-bar segment-bar--thin">
+                <div class="segment-bar__seg segment-bar__seg--positive" style="width:22.2%"></div>
+                <div class="segment-bar__seg segment-bar__seg--primary" style="width:14.8%"></div>
+                <div class="segment-bar__seg segment-bar__seg--negative" style="width:63%"></div>
               </div>
             </div>
-            <div class="news-item news-item--badge">
-              <span class="badge badge--dark">안전소통채널</span>
-              <div class="news-item__body">
-                <span class="news-item__title">지게차 후진 중 보행자 접촉 위험</span>
-                <span class="news-item__desc">2공장 자재창고, 작업자 1m 앞에서 정지</span>
+            <div class="detail-item source-tile">
+              <span class="source-tile__label">기계기구설비 점검</span>
+              <div class="source-tile__value-row">
+                <div class="detail-item__value-row"><span class="detail-item__value">11</span><span class="detail-item__unit">건</span></div>
+                <span class="badge badge--negative">지연 7</span>
               </div>
+              <div class="segment-bar segment-bar--thin">
+                <div class="segment-bar__seg segment-bar__seg--positive" style="width:18.2%"></div>
+                <div class="segment-bar__seg segment-bar__seg--primary" style="width:18.2%"></div>
+                <div class="segment-bar__seg segment-bar__seg--negative" style="width:63.6%"></div>
+              </div>
+            </div>
+            <div class="detail-item source-tile">
+              <span class="source-tile__label">안전 소통채널</span>
+              <div class="source-tile__value-row">
+                <div class="detail-item__value-row"><span class="detail-item__value">11</span><span class="detail-item__unit">건</span></div>
+                <span class="badge badge--negative">지연 9</span>
+              </div>
+              <div class="segment-bar segment-bar--thin">
+                <div class="segment-bar__seg segment-bar__seg--positive" style="width:9.1%"></div>
+                <div class="segment-bar__seg segment-bar__seg--primary" style="width:9.1%"></div>
+                <div class="segment-bar__seg segment-bar__seg--negative" style="width:81.8%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="source-etc">
+            <div class="source-etc__info">
+              <span class="source-tile__label">그 외 3개 활동</span>
+              <span class="source-etc__sub">작업환경측정 5 · 합동점검(협력사) 3 · 화학물질... 2</span>
+            </div>
+            <div class="source-tile__value-row">
+              <div class="detail-item__value-row"><span class="detail-item__value">10</span><span class="detail-item__unit">건</span></div>
+              <span class="badge badge--negative">지연 9</span>
             </div>
           </div>
         </div>
@@ -396,7 +435,7 @@
               <div class="detail-item__head-row">
                 <div class="detail-item__value-row"><span class="legend-dot legend-dot--caution"></span><span class="detail-item__value">11</span><span class="detail-item__unit">건</span></div>
               </div>
-              <div class="col col--tight"><span class="detail-item__title">운영부서 확인 대기</span><span class="alert-row__sub">미식별 수집 데이터 · 담당자 미지정</span></div>
+              <div class="col col--tight"><span class="detail-item__title">운영부서 확인 대기</span><span class="alert-row__sub">데이터 · 담당자 미지정</span></div>
             </div>
             <div class="detail-item">
               <div class="detail-item__head-row">
