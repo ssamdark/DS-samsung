@@ -228,6 +228,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 
 /* --- Two-column panel row --- */
 .panel-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.panel--fluid { min-width: 0; } /* 말줄임 텍스트가 그리드 칸을 늘리지 않도록 */
+.panel-grid .notice-list { flex: 1; padding-top: 14px; padding-bottom: 14px; } /* 패널 하단까지 회색 박스 채움, 5줄이 옆 패널 높이를 넘지 않도록 여백 축소 */
 .panel {
   background: var(--bg-primary); border: 1px solid var(--border-color);
   border-radius: var(--radius-lg); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
@@ -333,7 +335,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 /* --- Bottom 3-column grid --- */
 .bottom-grid { display: grid; grid-template-columns: 1.15fr 1fr 0.85fr; gap: 20px; }
 
-.row-1-3 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: start; }
+.row-1-3 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: stretch; }
+.row-1-3 .source-list { flex: 1; justify-content: space-between; } /* 옆 패널 높이에 맞춰 회색 박스 채움 */
 .row-1-3 > *:first-child { grid-column: span 1; }
 .row-1-3 > *:last-child { grid-column: span 3; }
 
@@ -373,6 +376,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 }
 .ehs-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--border-color); }
 .ehs-row:last-child { border-bottom: none; }
+.ehs-list--compact .ehs-row { padding: 8px 0; } /* 적격수급인 평가 패널 3열에 맞춘 축소형 */
+.ehs-list--compact .ehs-row__value { font-size: var(--fs-small); }
 .ehs-row__label { font-size: var(--fs-small); color: var(--text-primary); }
 .ehs-row__value { font-size: 18px; font-weight: var(--fw-bold); color: var(--text-primary); }
 .ehs-row__unit { font-size: var(--fs-caption); font-weight: var(--fw-regular); color: var(--text-secondary); margin-left: 2px; }
@@ -485,6 +490,10 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .news-item__title { font-size: var(--fs-small); font-weight: 500; color: var(--text-primary); line-height: var(--lh-title); }
 .news-item--badge { flex-direction: row; align-items: baseline; gap: 12px; } /* 배지 + 본문(제목·날짜) 내어쓰기 */
 .news-item--badge > .badge { flex: 0 0 auto; font-size: 13px; font-weight: var(--fw-regular); box-sizing: border-box; min-width: calc(5em + 16px); text-align: center; white-space: nowrap; } /* 5글자 기준 동일 폭 */
+.news-list--badge-lg .news-item--badge > .badge { min-width: calc(6em + 16px); } /* 6글자 배지(안전소통채널) 포함 시 */
+.panel-grid .news-list--badge-lg { flex: 1; } /* 패널 하단까지 채우고 카드 3개가 높이를 나눠 가짐 */
+.panel-grid .news-list--badge-lg .news-item { flex: 1; }
+.news-list--badge-lg .news-item__desc { white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; } /* 미리보기 2줄 말줄임 */
 .news-item__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
 .news-item__desc { font-size: var(--fs-caption); color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } /* 본문 미리보기 1줄 말줄임 */
 .news-item__date { font-size: var(--fs-caption); color: var(--text-tertiary); }
