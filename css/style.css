@@ -345,7 +345,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 
 .row-1-3 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: stretch; }
 .row-1-3 .source-list { flex: 1; justify-content: space-between; } /* 옆 패널 높이에 맞춰 회색 박스 채움 */
-.row-1-3 > .panel--span-2 { grid-column: span 2; } /* 협력사 수집 현황(1) · 적격수급인 평가 진척(2) · EHS 활동 현황(1) */
+.row-1-3 > .panel--span-2, .panel-grid > .panel--span-2 { grid-column: span 2; } /* 협력사 수집 현황(1) · 적격수급인 평가 진척(2) · EHS 활동 현황(1) */
 
 .detail-summary-row { display: flex; align-items: center; justify-content: space-between; }
 .detail-counts { display: flex; gap: 14px; font-size: var(--fs-small); color: var(--text-secondary); }
@@ -374,17 +374,21 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .detail-item__value { font-size: 22px; font-weight: var(--fw-bold); color: var(--text-primary); } /* KPI 디스플레이, 3단 체계 예외 */
 .detail-item__unit { font-size: var(--fs-caption); color: var(--text-secondary); }
 
-/* 문제점 출처: 활동별 발생 건수 타일 (2x2) */
-.source-tile-grid { flex: 1; }
-.source-tile-grid .detail-item.source-tile { background: var(--bg-primary); gap: 6px; justify-content: space-between; min-width: 0; }
-.source-tile__label { font-size: var(--fs-small); color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.source-tile__value-row { display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap; }
-.source-tile .detail-item__value { font-size: 22px; }
-.source-etc { display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px dashed var(--border-strong); border-radius: var(--radius-md); padding: 10px 12px; } /* 상위 4개 외 활동 합계 */
-.source-etc__info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-.source-etc__sub { font-size: var(--fs-caption); color: var(--text-tertiary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.source-etc .source-tile__value-row { flex-shrink: 0; flex-wrap: nowrap; gap: 14px; }
-.source-etc .detail-item__value { font-size: 22px; }
+/* 문제점 현황 > 문제점 출처: 활동별 상태 타일 (2x2 + 그 외) */
+.eval-grid--issue > .eval-col:first-child { align-items: stretch; border-right-style: solid; }
+.src-grid { flex: 1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.src-tile { display: flex; flex-direction: column; justify-content: center; gap: 6px; min-width: 0; padding: 8px 12px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--radius-md); }
+.src-tile--etc { grid-column: 1 / -1; border-style: dashed; border-color: var(--border-strong); }
+.src-tile__head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; min-width: 0; }
+.src-tile__label { font-size: var(--fs-small); font-weight: var(--fw-semibold); color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.src-tile__sub { margin-left: 6px; font-size: var(--fs-caption); font-weight: var(--fw-regular); color: var(--text-secondary); }
+.src-tile__value { flex-shrink: 0; font-size: 18px; font-weight: var(--fw-bold); color: var(--text-primary); } /* KPI 디스플레이, 3단 체계 예외 */
+.src-tile__unit { margin-left: 3px; font-size: var(--fs-caption); font-weight: var(--fw-regular); color: var(--text-secondary); }
+.src-tile__nums { display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; font-size: var(--fs-caption); font-weight: var(--fw-bold); }
+.src-num--positive { color: var(--status-positive); }
+.src-num--primary { color: var(--primary); }
+.src-num--caution { color: var(--status-caution); }
+.src-num--negative { color: var(--status-negative); }
 .segment-bar--thin { height: 6px; border-radius: var(--radius-pill); }
 
 .activity-row__labels { display: flex; align-items: baseline; gap: 6px; }
